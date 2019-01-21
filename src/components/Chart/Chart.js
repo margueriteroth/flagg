@@ -100,7 +100,6 @@ class Chart extends Component {
                 })
             ])
             .range([svgDimensions.height - margins.bottom, margins.top]);
-        // console.log(this.state.cyRandom);
         return (
             <div className="Chart__container">
                 <svg

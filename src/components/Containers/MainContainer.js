@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import AboutPage from "components/Pages/AboutPage";
+//import AboutPage from "components/Pages/AboutPage";
 import HomePage from "components/Pages/HomePage";
 import NotFoundPage from "components/Pages/NotFoundPage";
 import NumberTranslatorPage from "components/Pages/NumberTranslatorPage";

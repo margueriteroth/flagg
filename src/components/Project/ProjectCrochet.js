@@ -49,7 +49,6 @@ class ProjectCrochet extends Component {
 
     componentDidMount() {
         this.timeConverter(datacrochet);
-        console.log(datacrochet);
     }
 
     trackEvent = (action) => {
