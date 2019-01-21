@@ -25,7 +25,7 @@ class Intro extends Component {
             <div className={classNames("Intro", {"Intro--animate" : animate})}>
                 <Avatar className="Intro__avatar" />
                 <h1 className="Intro__heading">
-                    Hi — I'm Marguerite Roth, <br /> a product
+                    Hi — I'm Marguerite, <br /> a product
                     designer and developer.
                 </h1>
                 {/* {showingButtons && (
