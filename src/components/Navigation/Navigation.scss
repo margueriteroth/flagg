@@ -1,0 +1,146 @@
+@import "../../styles/lib.scss";
+
+.Navigation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: $max-width__navigation;
+    margin: 0 auto;
+    padding-left: $padding-horizontal;
+    padding-right: $padding-horizontal;
+
+    @media(min-width: 1700px) {
+        max-width: $max-width__navigation--l;
+    }
+
+    @media(max-width: $media-mobile) {
+        padding-left: $padding-horizontal--mobile;
+        padding-right: $padding-horizontal--mobile;
+        //padding-right: 60px;
+        //width: 380px;
+        margin: 0;
+    }
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 150ms linear;
+        z-index: 100;
+        background: rgba($white, 0.95);
+        background: $white;
+        transition: all 150ms linear;
+        color: $black;
+        box-shadow: $box-shadow;
+        height: $navigation-height;
+        opacity: 0;
+        transform: translateY(-10px);
+        z-index: 500;
+        pointer-events: none;
+
+        &--is-visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+
+        // @media(max-width: $media-mobile) {
+        //     overflow: scroll;
+        //     height: $navigation-height--mobile;
+
+        //     &::before {
+        //         position: fixed;
+        //         z-index: 200;
+        //         content: "";
+        //         width: 24px;
+        //         right: 0;
+        //         height: $navigation-height--mobile;
+        //         box-shadow: inset -38px 0px 24px -26px $white;
+        //     }
+
+        //     &::after {
+        //         position: fixed;
+        //         z-index: 200;
+        //         content: "";
+        //         width: 24px;
+        //         left: 0;
+        //         height: $navigation-height--mobile;
+        //         box-shadow: inset 38px 0px 24px -26px $white;
+        //     }
+
+        //     &::-webkit-scrollbar {
+        //         width: 0px;
+        //         height: 0px;
+        //         background: transparent; /* make scrollbar transparent */
+        //     }
+        // }
+    }
+
+    &__links {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    &__item {
+        font-weight: 600;
+        margin-right: 3em;
+        text-decoration: none;
+        color: $text-light;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+
+        &:visited {
+            color: $text-light;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        @media(max-width: $media-mobile) {
+            margin-right: 1.3em;
+        }
+
+        &--avatar {
+            margin-right: 16px;
+
+            @media(max-width: $media-mobile) {
+                order: -1;
+                margin-right: $padding-horizontal--mobile;
+
+                .Avatar__container {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+
+        &--title {
+            color: $text-dark;
+            font-weight: 700;
+
+            &:visited {
+                color:  $text-dark;
+            }
+        }
+
+        &--current {
+            color: $text-dark;
+            border-bottom-color: $blue;
+
+            &:visited {
+                color: $text-dark;
+            }
+        }
+    }
+}

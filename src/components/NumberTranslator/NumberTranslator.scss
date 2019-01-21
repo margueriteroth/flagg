@@ -1,0 +1,81 @@
+@import "../../styles/lib.scss";
+
+.NumberTranslator {
+    &Input,
+    &Result {
+        text-align: center;
+    }
+
+    &__input {
+        text-align: center;
+        font-size: 1.2em;
+        border: 1px solid $grey-200;
+        border-radius: 4px;
+        height: 2em;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-weight: 700;
+        margin-top: 1em;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &::placeholder {
+            color: $grey-300;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 3px 1px $blue;
+            border-color: rgba($blue, 0.25);
+        }
+
+        @media(max-width: $media-mobile) {
+            width: 100%;
+        }
+    }
+
+    &__chunks {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__translated {
+        min-height: 4em;
+
+        &--digits {
+            .NumberTranslator__chunks {
+                margin-bottom: 4em;
+            }
+        }
+    }
+
+    &.NumberTranslatorInput {
+        padding: 5em 3em 3em 3em;
+    }
+
+    &.NumberTranslatorResult {
+        padding: 2em 3em 4em 3em;
+    }
+
+    .NumberDigitsChunk,
+    .NumberTextChunk {
+        font-size: 2em;
+        margin: 0;
+        padding: 1px;
+
+        &__punctuation {
+            color: #A39C95;
+        }
+
+        &__unit {
+            text-decoration: underline;
+            position: relative;
+        }
+    }
+
+}

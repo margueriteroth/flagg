@@ -1,0 +1,56 @@
+@import "../../styles/lib.scss";
+
+.Intro {
+    margin-bottom: 13em;
+    margin-top: 30px;
+
+    &__avatar {
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1em;
+    }
+
+    &__contact {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 2em;
+
+        .Button {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            width: 100px;
+        }
+    }
+
+    &__heading {
+        @media(max-width: 500px) {
+            //font-size: 2.3em;
+        }
+    }
+
+    &--animate {
+        .Intro {
+            &__avatar {
+                animation: avatar--fade--shrink;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@keyframes avatar--fade--shrink {
+    0% {
+        opacity: 1;
+        height: 80px;
+    }
+    50% {
+        opacity: 0;
+        height: 80px;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+}

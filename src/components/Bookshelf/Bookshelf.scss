@@ -1,0 +1,73 @@
+@import "../../styles/lib.scss";
+
+.Bookshelf {
+
+    &__header {
+        display: flex;
+        align-items: center;
+
+        &__emoji {
+            margin-right: 5px;
+        }
+    }
+
+    &__label {
+        margin-bottom: 1em;
+    }
+
+    &__action {
+        &__container {
+            padding: 1.25em;
+        }
+
+        &__message {
+            margin: 0;
+            margin-top: 10px;
+            margin-bottom: 2em;
+        }
+    }
+
+    .BookRowLabel {
+        //border: 1px solid red;
+
+        &--author {
+            padding-left: 16px;
+        }
+
+        &--genre {
+            padding-left: 6px;
+        }
+
+        &s {
+            display: grid;
+            grid-template-columns: $BookRow__grid;
+            align-items: baseline;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            margin-bottom: 10px;
+            grid-gap: $BookRow__grid-gap;
+        }
+
+
+
+    }
+
+    &__books {
+        &__title {
+            margin-bottom: 1em;
+        }
+
+        &__container {
+            //box-shadow: $box-shadow;
+            background: $white;
+            //border-radius: $border-radius;
+            padding-top: 0.5em;
+        }
+    }
+
+    &__genres__container {
+        @media(max-width: 500px) {
+            display: none;
+        }
+    }
+}
