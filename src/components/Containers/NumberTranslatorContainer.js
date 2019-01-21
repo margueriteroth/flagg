@@ -246,6 +246,9 @@ class NumberTranslatorContainer extends Component {
             } else if (arr[1] === "0") {
                 if (arr[2] === "0") {
                     _.set(periodThousands, 'hundreds.text', spanishNumbers.base[arr[0] + "00"]);
+                } else if (arr[2] === "1") {
+                    _.set(periodThousands, 'hundreds.text', spanishNumbers.base[arr[0] + "00"]);
+                    _.set(periodThousands, 'ones.text', 'un'); //no "uno" past 1000
                 } else {
                     _.set(periodThousands, 'hundreds.text', spanishNumbers.base[arr[0] + "00"]);
                     _.set(periodThousands, 'ones.text', spanishNumbers.base[arr[2]]);
@@ -305,6 +308,9 @@ class NumberTranslatorContainer extends Component {
             } else if (arr[1] === "0") {
                 if (arr[2] === "0") {
                     _.set(periodMillions, 'hundreds.text', spanishNumbers.base[arr[0] + "00"]);
+                } else if (arr[2] === "1") {
+                    _.set(periodMillions, 'hundreds.text', spanishNumbers.base[arr[0] + "00"]);
+                    _.set(periodMillions, 'ones.text', 'un'); //no "uno" past 1000
                 } else {
                     _.set(periodMillions, 'hundreds.text', spanishNumbers.base[arr[0] + "00"]);
                     _.set(periodMillions, 'ones.text', spanishNumbers.base[arr[2]]);
@@ -364,6 +370,9 @@ class NumberTranslatorContainer extends Component {
             } else if (arr[1] === "0") {
                 if (arr[2] === "0") {
                     _.set(periodBillions, 'hundreds.text', spanishNumbers.base[arr[0] + "00"]);
+                } else if (arr[2] === "1") {
+                    _.set(periodBillions, 'hundreds.text', spanishNumbers.base[arr[0] + "00"]);
+                    _.set(periodBillions, 'ones.text', 'un'); //no "uno" past 1000
                 } else {
                     _.set(periodBillions, 'hundreds.text', spanishNumbers.base[arr[0] + "00"]);
                     _.set(periodBillions, 'ones.text', spanishNumbers.base[arr[2]]);

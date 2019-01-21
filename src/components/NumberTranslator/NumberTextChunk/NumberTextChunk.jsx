@@ -80,7 +80,7 @@ class NumberTextChunk extends Component {
                 {period.name === 'periodBillions' && (
                     <React.Fragment>
                         <span className="NumberTextChunk__period__name" style={{ color: theme.one }}>
-                            billiones
+                            mil
                         </span>
                         <span className="NumberTextChunk__punctuation">
                             ,
