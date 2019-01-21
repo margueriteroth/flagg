@@ -3,12 +3,12 @@
 .Label {
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
-    font-size: 0.75em;
+    letter-spacing: 0.04em;
+    font-size: 0.8em;
 
     &--primary {
         color: $grey-900;
-        font-weight: 800;
+        font-weight: 700;
     }
 
     &--secondary {

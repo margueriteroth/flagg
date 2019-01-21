@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Avatar from "components/_ui/Avatar/Avatar";
 import classNames from 'classnames';
 import Button from "components/_ui/Button/Button";
+import Label from "components/_ui/Label/Label";
 //import PropTypes from 'prop-types';
 import './Navigation.css';
 
@@ -97,14 +98,18 @@ class Navigation extends Component {
                             className={classNames("Navigation__item",
                                 { "Navigation__item--current": currentPage ==="/"})}
                             to="/">
-                            Projects
+                            <Label category="primary">
+                                Projects
+                            </Label>
                         </Link>
                         {/* <Link
                             onClick={() => this.onClick('About')}
                             className={classNames("Navigation__item Navigation__item--about",
                                 { "Navigation__item--current": currentPage === "/about" })}
                             to="/about">
-                            About
+                            <Label category="primary">
+                                About
+                            </Label>
                         </Link> */}
                         <a href="mailto:marguerite.roth@gmail.com"
                             onClick={() => this.trackEvent('Navigation | clicked Contact')}
