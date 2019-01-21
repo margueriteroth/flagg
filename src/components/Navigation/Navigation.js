@@ -5,7 +5,7 @@ import Avatar from "components/_ui/Avatar/Avatar";
 import classNames from 'classnames';
 import Button from "components/_ui/Button/Button";
 import Label from "components/_ui/Label/Label";
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './Navigation.css';
 
 class Navigation extends Component {
@@ -15,6 +15,10 @@ class Navigation extends Component {
             navIsVisible: false,
         };
     }
+
+    static propTypes = {
+        currentPage: PropTypes.string,
+    };
 
     trackEvent = (action) => {
         ReactGA.event({

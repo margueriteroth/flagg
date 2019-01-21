@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import spanishNumbers from "spanishNumbers.js";
 import NumberTranslatorInput from "components/NumberTranslator/NumberTranslatorInput";
 import NumberTranslatorResult from "components/NumberTranslator/NumberTranslatorResult";
+import PropTypes from 'prop-types';
 import _ from "lodash";
 
 const emptyPeriod = {
@@ -66,6 +67,9 @@ class NumberTranslatorContainer extends Component {
         arrBillions: _.noop(),
     };
 
+    static propTypes = {
+        autofocus: PropTypes.bool,
+    };
 
     clearInput = () => {
         this.setState({
@@ -385,6 +389,7 @@ class NumberTranslatorContainer extends Component {
     }
 
     render() {
+        const { autofocus } = this.props;
         const { value, periodOnes, periodThousands, periodMillions, periodBillions, arrOnes, arrThousands, arrMillions, arrBillions } = this.state;
         return (
             <div className="NumberTranslatorContainer">
@@ -392,7 +397,8 @@ class NumberTranslatorContainer extends Component {
                     {...this.props}
                     setChunksToTranslate={this.setChunksToTranslate}
                     handleChange={this.handleChange}
-                    value={value} />
+                    value={value}
+                    autofocus={autofocus} />
                 <NumberTranslatorResult
                     periodOnes={periodOnes}
                     periodThousands={periodThousands}

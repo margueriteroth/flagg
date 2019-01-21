@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import NumberTranslatorContainer from "components/Containers/NumberTranslatorContainer";
 
 class NumberTranslatorPage extends Component {
+    scrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
+
+    componentDidMount() {
+        this.scrollToTop();
+    }
 
     render() {
         return (
@@ -9,7 +16,7 @@ class NumberTranslatorPage extends Component {
                 <h1>
                     Numeros en español
                 </h1>
-                <NumberTranslatorContainer />
+                <NumberTranslatorContainer autofocus />
             </div>
         );
     }

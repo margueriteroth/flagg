@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import BookshelfContainer from "components/Bookshelf/BookshelfContainer";
+import BookshelfContainer from "components/Bookshelf/BookshelfContainer";
 import Intro from "components/Intro/Intro";
 import Project from "components/Project/Project";
 import ProjectCrochet from "components/Project/ProjectCrochet";
@@ -26,7 +26,6 @@ class HomePage extends Component {
     componentDidMount() {
         const offset = this.projectSectionRef.current.offsetTop;
         this.props.setProjectSectionOffset(offset);
-        this.scrollToTop();
     }
 
     render() {
@@ -51,7 +50,7 @@ class HomePage extends Component {
                             key={key}
                         />
                     )}
-                    <ProjectNumbers routerProps={routerProps} />
+                    <ProjectNumbers />
                     {/* <BookshelfContainer books={books} /> */}
                 </div>
             </div>

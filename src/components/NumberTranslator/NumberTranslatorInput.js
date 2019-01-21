@@ -29,7 +29,7 @@ class NumberTranslatorInput extends Component {
     }
 
     render() {
-        const { handleChange, value } = this.props;
+        const { autofocus, handleChange, value } = this.props;
         return (
             <div className="NumberTranslator NumberTranslatorInput">
                 <Label>
@@ -38,7 +38,7 @@ class NumberTranslatorInput extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <input
                         onClick={() => this.trackEvent('NumberTranslator (' + (this.props.isOnHomepage ? 'Home' : 'Page') + ') | clicked input')}
-                        autoFocus={true}
+                        autoFocus={autofocus}
                         className="NumberTranslator__input"
                         number={value}
                         value={value}
