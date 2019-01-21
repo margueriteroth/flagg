@@ -11,15 +11,9 @@ const tech = [
     "react",
     "lodash",
 ]
-
 class ProjectNumbers extends Component {
-    scrollToTop = () => {
-        window.scrollTo(0, 0);
-    }
-
     onClick = () => {
         this.trackEvent('NumberTranslator (' + (this.props.isOnHomepage ? 'Home' : 'Page') + ') | clicked through to project Page');
-        this.scrollToTop();
     }
 
     trackEvent = (action) => {
