@@ -130,7 +130,7 @@
         margin-bottom: 9px;
 
         &__section {
-            margin-top: 36px;
+            margin-top: 56px;
             margin-bottom: 14px;
         }
 
@@ -237,6 +237,10 @@
 
             &__label {
                 margin-bottom: 14px;
+            }
+
+            &__data {
+                color: $grey-500;
             }
 
             &__icon {
