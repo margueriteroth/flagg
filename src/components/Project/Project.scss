@@ -240,7 +240,9 @@
             }
 
             &__data {
-                color: $grey-500;
+                &--total {
+                    color: $grey-500;
+                }
             }
 
             &__icon {

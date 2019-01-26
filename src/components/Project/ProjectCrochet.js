@@ -73,7 +73,7 @@ class ProjectCrochet extends Component {
                                 Total time
                             </Label>
                             <div className="ProjectCrochet__tooltip__info">
-                                <span className="ProjectCrochet__tooltip__data">
+                                <span className="ProjectCrochet__tooltip__data ProjectCrochet__tooltip__data--total">
                                     81 hours, 2 minutes, 15 seconds
                                 </span>
                             </div>
