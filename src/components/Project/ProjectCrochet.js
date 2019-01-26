@@ -69,7 +69,7 @@ class ProjectCrochet extends Component {
                     </h2>
                     <div className="Project__about">
                         <div className="ProjectCrochet__tooltip ProjectCrochet__tooltip--total-time">
-                            <Label category="secondary" className="ProjectCrochet__tooltip__label">
+                            <Label category="primary" className="ProjectCrochet__tooltip__label">
                                 Total time
                             </Label>
                             <div className="ProjectCrochet__tooltip__info">
@@ -78,23 +78,23 @@ class ProjectCrochet extends Component {
                                 </span>
                             </div>
                         </div>
-                        <div className="ProjectCrochet__tooltip ProjectCrochet__tooltip--total-time">
-                            <Label category="secondary" className="ProjectCrochet__tooltip__label">
-                                Insight
-                            </Label>
-                            <div className="ProjectCrochet__tooltip__info">
-                                <span className="ProjectCrochet__tooltip__data">
-                                    Crocheting a blanket takes a lot of time
-                                </span>
-                            </div>
-                        </div>
                         <p>
                             I crocheted a queen-sized blanket for a friend
                             and tracked my time (I started tracking time after ~24 hours).
                             Highlights included binging Netflix and hand cramps.
-                            {/* <a href="https://www.ravelry.com/patterns/library/may-day-baby-blanket">Blanket pattern</a> */}
                         </p>
-
+                        <p>
+                            Insight: crocheting a blanket takes a lot of time.
+                        </p>
+                        <p>
+                            <i className="Project__link__icon fab fa-github"></i>
+                            <a className="Project__inspiration__link"
+                                onClick={() => this.trackEvent('Project | clicked Github: Crochet')}
+                                href="https://github.com/margueriteroth/flagg/blob/master/src/components/Chart/Chart.js"
+                                rel="noopener noreferrer" target="_blank" >
+                                Github
+                            </a>
+                        </p>
                     </div>
                     <div className="Project__tech__section">
                         <Label className="Project__tech__title" category="primary">

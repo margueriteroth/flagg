@@ -6,8 +6,6 @@ import Circles from 'components/Chart/Circles/Circles';
 import ChartContainer from 'components/Chart/ChartContainer';
 import PropTypes from 'prop-types';
 
-//import Tooltip from 'components/Chart/Tooltip/Tooltip';
-
 import './Chart.css';
 
 const cyRandomDesktop = [242.5, 76.25, 242.5, 76.25, 85, 303.75,
@@ -135,13 +133,6 @@ class Chart extends Component {
                         </text>
                     )}
                 </svg>
-                {/* {hoveredCircle ?
-                    <Tooltip
-                        hoveredBar={hoveredCircle}
-                        scales={{ xScale, yScale }}
-                    /> :
-                    null
-                } */}
             </div>
         );
     }
