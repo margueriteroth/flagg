@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NumberTranslatorContainer from "components/Containers/NumberTranslatorContainer";
+import NumberTranslatorContainer from "components/NumberTranslator/NumberTranslatorContainer";
 
 class NumberTranslatorPage extends Component {
     scrollToTop = () => {

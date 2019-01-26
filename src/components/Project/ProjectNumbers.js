@@ -3,7 +3,7 @@ import ReactGA from 'react-ga';
 import { Link } from 'react-router-dom';
 import Button from "components/_ui/Button/Button";
 import Label from "components/_ui/Label/Label";
-import NumberTranslatorContainer from "components/Containers/NumberTranslatorContainer";
+import NumberTranslatorContainer from "components/NumberTranslator/NumberTranslatorContainer";
 import classNames from 'classnames';
 import './Project.css';
 
@@ -43,6 +43,15 @@ class ProjectNumbers extends Component {
                             I am currently learning spanish and one hurdle was understanding
                             (and remembering) number patterns past 100. I built this translator
                             to check numbers I am converting.
+                        </p>
+                        <p>
+                            <i className="Project__link__icon fab fa-github"></i>
+                            <a className="Project__inspiration__link"
+                                onClick={() => this.trackEvent('Project | clicked Github: Number Translator')}
+                                href="https://github.com/margueriteroth/flagg/blob/master/src/components/NumberTranslator/NumberTranslatorContainer.js"
+                                rel="noopener noreferrer" target="_blank" >
+                                Github
+                            </a>
                         </p>
                     </div>
                     <div className="Project__tech__section">
