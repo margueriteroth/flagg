@@ -54,7 +54,7 @@ class Footer extends Component {
                         </Label>
                     </div>
                     <div className="Footer__section Footer__section__contact">
-                        <a href="mailto:marguerite.roth@gmail.com"
+                        <a href="mailto:hello@marguerite.io"
                            onClick={() => this.trackEvent('Footer | clicked Contact')}
                            rel="noopener noreferrer" target="_blank">
                             <Button category="secondary--white">
@@ -66,8 +66,12 @@ class Footer extends Component {
                 <div className="Footer__pets">
                     <SpinningPets />
                 </div>
-                <div className="Footer__copyright">
-                    &copy; 2019 Marguerite Roth
+                <div className="Footer__copyright__container">
+                    <span className="Footer__copyright">
+                        &copy; 2019 — </span>
+                    <a className="Footer__copyright__link" href="https://github.com/margueriteroth/flagg">
+                        Designed and developed by Marguerite Roth
+                    </a>
                 </div>
             </div>
         );

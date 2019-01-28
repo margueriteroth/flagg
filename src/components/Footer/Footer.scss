@@ -65,10 +65,29 @@
     }
 
     &__copyright {
-        opacity: 0.45;
-        max-width: $max-width__content;
-        margin: 0 auto;
-        text-align: right;
+        opacity: 0.6;
+
+        &__container {
+            max-width: $max-width__content;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 3em;
+        }
+
+        &__link {
+            color: $white;
+            text-decoration: none;
+            font-weight: 400;
+            opacity: 0.6;
+
+            &:visited {
+                color: $white;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
 
         @media(min-width: 1700px) {
             max-width: $max-width__content--l;
