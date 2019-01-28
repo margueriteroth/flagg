@@ -69,7 +69,9 @@ class Footer extends Component {
                 <div className="Footer__copyright__container">
                     <span className="Footer__copyright">
                         &copy; 2019 — </span>
-                    <a className="Footer__copyright__link" href="https://github.com/margueriteroth/flagg">
+                    <a className="Footer__copyright__link" href="https://github.com/margueriteroth/flagg"
+                       onClick={() => this.trackEvent('Footer | clicked Copyright Github link')}
+                       rel="noopener noreferrer" target="_blank">
                         Designed and developed by Marguerite Roth
                     </a>
                 </div>
