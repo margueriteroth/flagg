@@ -9,6 +9,7 @@ $navigation-height--mobile: 56px;
 
 $max-width__content: 1300px;
 $max-width__content--l: 1500px;
+$max-width__footer: 1180px; //max-width content minus both content's padding
 $max-width__navigation: 910px;
 $max-width__navigation: $max-width__content;
 $max-width__navigation--l: $max-width__content--l;

@@ -9,7 +9,7 @@ import '../styles/global.css';
 
 class App extends Component {
     state = {
-        projectSectionOffset: 577,
+        projectSectionOffset: 640,
         navProjectsIsActive: false,
     }
 
