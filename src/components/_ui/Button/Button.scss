@@ -4,12 +4,30 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    font-size: 0.8em;
-    padding: 5px 12px 5px 12px;
-    border-radius: 20px;
     border: 1px solid transparent;
-    height: 25px;
     transition: all 150ms ease-out;
+
+    &--shape {
+        &-round {
+            border-radius: 20px;
+        }
+
+        &-square {
+            border-radius: 4px;
+        }
+    }
+
+    &--size {
+        &-large {
+            font-size: 0.8em;
+            padding: 12px 20px 12px 20px;
+        }
+
+        &-small {
+            font-size: 0.8em;
+            padding: 5px 12px 5px 12px;
+        }
+    }
 
     &--primary {
         color: $white;
@@ -19,6 +37,7 @@
         &:hover {
             background: desaturate(darken($blue, 8%), 20%);
             border-color: desaturate(darken($blue, 8%), 20%);
+            cursor: pointer;
         }
     }
 
@@ -27,6 +46,11 @@
         background: transparent;
         background: $white;
         border-color: $blue;
+
+        &:hover {
+            box-shadow: $box-shadow--hover;
+            cursor: pointer;
+        }
     }
 
     &--secondary--white {
@@ -37,12 +61,8 @@
         &:hover {
             background: rgba($white, 0.075);
             transition: all 150ms ease-out;
+            cursor: pointer;
         }
-    }
-
-    &:hover {
-        box-shadow: $box-shadow;
-        cursor: pointer;
     }
 
     &:focus {

@@ -22,14 +22,19 @@ body {
         "Apple Color Emoji",
         "Segoe UI Emoji",
         "Segoe UI Symbol";
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 16px;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background: $background;
     color: $black;
 
     * {
         box-sizing: border-box;
+    }
+
+    ::selection {
+        background: rgba($blue, 1);
+        color: $white;
     }
 }
 
@@ -74,8 +79,8 @@ h1 {
 }
 
 h2 {
-    font-size: 1.8em;
-    line-height: 1.25;
+    font-size: 1.7em;
+    line-height: 1.2;
 }
 
 p {
