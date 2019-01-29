@@ -54,7 +54,7 @@ class Footer extends Component {
                         </Label>
                     </div>
                     <div className="Footer__section Footer__section__contact">
-                        <a href="mailto:hello@marguerite.io"
+                        <a href="mailto:marguerite.roth@gmail.com"
                            onClick={() => this.trackEvent('Footer | clicked Contact')}
                            rel="noopener noreferrer" target="_blank">
                             <Button category="secondary--white">
