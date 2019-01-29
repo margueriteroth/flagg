@@ -106,7 +106,7 @@ class Navigation extends Component {
                                 Projects
                             </Label>
                         </Link>
-                        {/* <Link
+                        <Link
                             onClick={() => this.onClick('About')}
                             className={classNames("Navigation__item Navigation__item--about",
                                 { "Navigation__item--current": currentPage === "/about" })}
@@ -114,7 +114,7 @@ class Navigation extends Component {
                             <Label category="primary">
                                 About
                             </Label>
-                        </Link> */}
+                        </Link>
                         <a href="mailto:hello@marguerite.io"
                             onClick={() => this.trackEvent('Navigation | clicked Contact')}
                             rel="noopener noreferrer" target="_blank">

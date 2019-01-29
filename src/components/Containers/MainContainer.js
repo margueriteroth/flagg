@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-//import AboutPage from "components/Pages/AboutPage";
+import AboutPage from "components/Pages/AboutPage";
 import HomePage from "components/Pages/HomePage";
 import NotFoundPage from "components/Pages/NotFoundPage";
 import NumberTranslatorPage from "components/Pages/NumberTranslatorPage";
@@ -17,7 +17,7 @@ class MainContainer extends Component {Pages
                         setProjectSectionOffset={this.props.setProjectSectionOffset}
                     />
                 } />
-                {/* <Route exact path="/about" component={AboutPage} /> */}
+                <Route exact path="/about" component={AboutPage} />
                 <Route exact path="/numeros-en-espanol" component={NumberTranslatorPage} />
                 <Route exact path="/test-chart" component={TestChartPage} />
                 <Route path="*" component={NotFoundPage} />
