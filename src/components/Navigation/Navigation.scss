@@ -117,6 +117,7 @@
             @media(max-width: $media-mobile) {
                 order: -1;
                 margin-right: $padding-horizontal--mobile;
+                display: none;
 
                 .Avatar__container {
                     height: 40px;

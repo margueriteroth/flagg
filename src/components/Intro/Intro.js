@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Avatar from "../_ui/Avatar/Avatar";
-//import Button from "components/_ui/Button/Button";
+import Button from "components/_ui/Button/Button";
 import ReactGA from 'react-ga';
 import classNames from 'classnames';
-//import { Link } from 'react-router-dom';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Link } from 'react-router-dom';
 import './Intro.css';
 
 class Intro extends Component {
@@ -20,32 +21,31 @@ class Intro extends Component {
     }
 
     render() {
-        const {animate} = this.props;
+        const {animate, showingButtons} = this.props;
         return (
             <div className={classNames("Intro", {"Intro--animate" : animate})}>
                 <Avatar className="Intro__avatar" />
-                <h1 className="Intro__heading">
-                    Hi — I'm Marguerite Roth, <br /> a product
-                    designer and developer.
+                <h1 className="Intro__header">
+                    I'm a product designer <br /> and developer.
                 </h1>
-                {/* {showingButtons && (
+
+                {showingButtons && (
                     <div className="Intro__contact">
-                        <Link
-                            onClick={this.scrollToTop}
-                            to="/about">
-                            <Button>
-                                About
-                        </Button>
-                        </Link>
-                        <a href="mailto:marguerite.roth@gmail.com"
+                        <AnchorLink href='#projects' offset="156">
+                            <Button shape="square" size="large">
+                                Explore projects
+                            </Button>
+                        </AnchorLink>
+
+                        <a href="mailto:hello@marguerite.io"
                             onClick={() => this.trackEvent('Intro | clicked Contact Button')}
                             rel="noopener noreferrer" target="_blank">
-                            <Button category="secondary">
+                            <Button shape="square" size="large" category="secondary">
                                 Contact
-                        </Button>
+                            </Button>
                         </a>
                     </div>
-                )} */}
+                )}
             </div>
         );
     }

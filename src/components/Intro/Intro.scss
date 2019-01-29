@@ -1,13 +1,17 @@
 @import "../../styles/lib.scss";
 
 .Intro {
+    text-align: center;
+    //max-width: 700px;
+    margin: 0 auto;
     margin-bottom: 13em;
     margin-top: 30px;
 
+
     &__avatar {
         margin: 0 auto;
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         margin-bottom: 1em;
     }
 
@@ -20,14 +24,44 @@
         .Button {
             margin-left: 0.5em;
             margin-right: 0.5em;
-            width: 100px;
         }
     }
 
-    &__heading {
-        @media(max-width: 500px) {
-            //font-size: 2.3em;
+    &__header {
+        font-size: 4.25em;
+        font-weight: 900;
+        line-height: 1.2;
+        max-width: 100%;
+        transition: font-size 100ms ease-out;
+
+        @media(max-width: 960px) {
+            font-size: 3.75em;
+            transition: font-size 100ms ease-out;
         }
+
+        @media(max-width: 768px) {
+            font-size: 3em;
+            transition: font-size 100ms ease-out;
+        }
+
+        @media(max-width: 500px) {
+            font-size: 2.3em;
+            transition: font-size 100ms ease-out;
+        }
+    }
+
+    &__subheader {
+        font-weight: 400;
+        font-size: 1.75em;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        animation: fade--up 1s ease-out;
+    }
+
+    &__button {
+        animation: fade--up 1s ease-out;
     }
 
     &--animate {

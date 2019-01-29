@@ -35,7 +35,7 @@ class HomePage extends Component {
             <div className="HomePage">
                 <Intro showingButtons />
 
-                <div className="HomePage__projects" ref={this.projectSectionRef}>
+                <div className="HomePage__projects" ref={this.projectSectionRef} id="projects">
                     <ProjectCrochet routerProps={routerProps}/>
                     {Object.keys(projects).map((key) =>
                         <Project
