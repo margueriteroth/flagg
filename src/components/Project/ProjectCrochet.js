@@ -65,7 +65,7 @@ class ProjectCrochet extends Component {
             <div className="ProjectCrochet Project__container">
                 <div className="Project__info__container">
                     <h2 className="Project__title">
-                        Time tracking a crochet blanket
+                        Crochet blanket
                     </h2>
                     <div className="Project__about">
                         <div className="ProjectCrochet__tooltip ProjectCrochet__tooltip--total-time">
