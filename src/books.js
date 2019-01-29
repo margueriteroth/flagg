@@ -3,34 +3,76 @@ import React from "react";
 //Summaries and images from goodreads.com
 
 const books = [
+    // {
+    //     title: "If You Really Loved Me",
+    //     author: "Ann Rule",
+    //     finished: 2018,
+    //     inProgress: true,
+    //     "tags": [
+    //         "non-fiction",
+    //         "true crime",
+    //     ],
+    //     goodreadsUrl: "https://www.goodreads.com/book/show/118469.If_You_Really_Loved_Me",
+    //     coverImg: "https://images.gr-assets.com/books/1348985837l/118469.jpg",
+    //     summary: <div>
+    //         <p>
+    //             David Brown was the consummate entrepreneur: a computer wizard and millionaire
+    //             by age thirty-two. When his beautiful young wife was shot to death as she slept,
+    //             Brown's fourteen-year-old daughter, Cinnamon, confessed to killing her stepmother.
+    //             The California courts sentenced her harshly: twenty-four years to life. But in
+    //             the wake of Cinnamon's murder conviction, thanks in part to two determined lawmen,
+    //             the twisted private world of David Brown himself unfolded with astonishing clarity
+    //             -- revealing a trail of perverse love, twisted secrets, and evil mind games.
+    //         </p>
+    //         <p>
+    //             A complex and often dangerous investigation suggested a horrifying scenario: Was
+    //             the seemingly bland David Brown really a stone-cold killer who convinced his
+    //             own daughter to prove her love by killing for him? A man who turned young women
+    //             into his own personal slaves, who collected nearly $1 million in insurance money,
+    //             and married his dead wife's teenage sister, David Brown was a sociopath who would
+    //             stop at nothing...a deadly charmer who almost got away with everything.
+    //         </p>
+    //     </div>
+    // },
     {
-        title: "If You Really Loved Me",
-        author: "Ann Rule",
-        finished: 2018,
+        title: "Class Trip & The Mustache",
+        author: "Emmanuel Carrere",
+        finished: "",
         inProgress: true,
         "tags": [
-            "non-fiction",
-            "true crime",
+            "fiction",
+            "mystery",
         ],
-        goodreadsUrl: "https://www.goodreads.com/book/show/118469.If_You_Really_Loved_Me",
-        coverImg: "https://images.gr-assets.com/books/1348985837l/118469.jpg",
+        goodreadsUrl: "https://www.goodreads.com/book/show/340240.Two_by_Carr_re",
+        coverImg: "https://images.gr-assets.com/books/1388849971l/340240.jpg",
         summary: <div>
             <p>
-                David Brown was the consummate entrepreneur: a computer wizard and millionaire
-                by age thirty-two. When his beautiful young wife was shot to death as she slept,
-                Brown's fourteen-year-old daughter, Cinnamon, confessed to killing her stepmother.
-                The California courts sentenced her harshly: twenty-four years to life. But in
-                the wake of Cinnamon's murder conviction, thanks in part to two determined lawmen,
-                the twisted private world of David Brown himself unfolded with astonishing clarity
-                -- revealing a trail of perverse love, twisted secrets, and evil mind games.
+                Two harrowing tales of pyschological suspense--hailed as " stunning"
+                (John Updike)--from the mathematician of horror.
             </p>
             <p>
-                A complex and often dangerous investigation suggested a horrifying scenario: Was
-                the seemingly bland David Brown really a stone-cold killer who convinced his
-                own daughter to prove her love by killing for him? A man who turned young women
-                into his own personal slaves, who collected nearly $1 million in insurance money,
-                and married his dead wife's teenage sister, David Brown was a sociopath who would
-                stop at nothing...a deadly charmer who almost got away with everything.
+                Two by Carrere brings together the greatest works of Emmanuel Carrere,
+                "the Stephen King of France" (Mirabella), two novels that are at once
+                gripping suspense stories and laser probes into the modern psyche.
+            </p>
+            <p>
+                The Mustache begins with a husband's playful question to his wife:
+                "What would you say if I shaved off my mustache?" But, for the hero
+                of The Mustache, that simple question catapults him into a metaphysical
+                nightmare as his wife and friends not only fail to notice his newly
+                clean-shaven appearance but deny the existence altogether of his
+                former mustache. Is he the victim of some bad joke? Or have they
+                all suddenly gone mad?
+            </p>
+            <p>
+                In Class Trip, little Nicolas embarks on an ill-fated overnight
+                excursion. Prone to lurid imaginings of kidnappings and organ
+                thefts, Nicolas watches his fantasies grow horrifyingly real
+                when a local child disappears. Nicolas takes it upon himself
+                to investigate, fearlessly playing detective--until he uncovers
+                the devastating truth. Dramatic, taut with intensity, Carrere's
+                depictions of the terrifying anxieties and shifting realities of
+                modern life are marvels of concentrated emotion.
             </p>
         </div>
     },

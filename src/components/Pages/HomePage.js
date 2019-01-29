@@ -51,7 +51,7 @@ class HomePage extends Component {
                         />
                     )}
                     <ProjectNumbers />
-                    {/* <BookshelfContainer books={books} /> */}
+                    <BookshelfContainer books={books} />
                 </div>
             </div>
         );
