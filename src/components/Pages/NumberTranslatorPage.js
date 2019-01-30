@@ -13,7 +13,7 @@ class NumberTranslatorPage extends Component {
     render() {
         return (
             <div className="NumberTranslatorPage">
-                <h1>
+                <h1 className="text-align--center">
                     Numeros en español
                 </h1>
                 <NumberTranslatorContainer autofocus />
