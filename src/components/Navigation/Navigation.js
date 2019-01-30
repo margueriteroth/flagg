@@ -115,7 +115,7 @@ class Navigation extends Component {
                                 About
                             </Label>
                         </Link> */}
-                        <a href="mailto:marguerite.roth@gmail.com"
+                        <a href="mailto:hello@marguerite.io"
                             onClick={() => this.trackEvent('Navigation | clicked Contact')}
                             rel="noopener noreferrer" target="_blank">
                             <Button>

@@ -39,7 +39,7 @@ class Intro extends Component {
                         </Button>
                     </AnchorLink>
 
-                    <a href="mailto:marguerite.roth@gmail.com"
+                    <a href="mailto:hello@marguerite.io"
                         onClick={() => this.trackEvent('Intro | clicked Contact Button')}
                         rel="noopener noreferrer" target="_blank">
                         <Button shape="square" size="large" category="secondary" className="Intro__button">
