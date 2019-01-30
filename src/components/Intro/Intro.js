@@ -26,26 +26,27 @@ class Intro extends Component {
             <div className={classNames("Intro", {"Intro--animate" : animate})}>
                 <Avatar className="Intro__avatar" />
                 <h1 className="Intro__header">
-                    I'm a product designer <br /> and developer.
+                    Hi, I'm Marguerite, a product designer and developer
                 </h1>
+                <h2 className="Intro__subheader">
+                    I design interfaces, create digital experiences, and explore data.
+                </h2>
 
-                {showingButtons && (
-                    <div className="Intro__contact">
-                        <AnchorLink href='#projects' offset="156">
-                            <Button shape="square" size="large">
-                                Explore projects
-                            </Button>
-                        </AnchorLink>
+                <div className="Intro__contact">
+                    <AnchorLink href='#projects' offset="156">
+                        <Button shape="square" size="large" className="Intro__button">
+                            Explore projects
+                        </Button>
+                    </AnchorLink>
 
-                        <a href="mailto:marguerite.roth@gmail.com"
-                            onClick={() => this.trackEvent('Intro | clicked Contact Button')}
-                            rel="noopener noreferrer" target="_blank">
-                            <Button shape="square" size="large" category="secondary">
-                                Contact
-                            </Button>
-                        </a>
-                    </div>
-                )}
+                    <a href="mailto:marguerite.roth@gmail.com"
+                        onClick={() => this.trackEvent('Intro | clicked Contact Button')}
+                        rel="noopener noreferrer" target="_blank">
+                        <Button shape="square" size="large" category="secondary" className="Intro__button">
+                            Contact
+                        </Button>
+                    </a>
+                </div>
             </div>
         );
     }
