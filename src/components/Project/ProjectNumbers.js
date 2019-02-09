@@ -28,9 +28,9 @@ class ProjectNumbers extends Component {
         return (
             <div className="ProjectNumbers Project__container">
                 <div className="Project__info__container">
-                    <h1 className="Project__title">
+                    <h2 className="Project__title">
                         Números en español
-                    </h1>
+                    </h2>
                     <div className="Project__about">
                         <p>
                             <Link to="/numeros-en-espanol">
