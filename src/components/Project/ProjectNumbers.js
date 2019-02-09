@@ -68,7 +68,7 @@ class ProjectNumbers extends Component {
                     </div>
                 </div>
                 <div className={classNames("Project__image__container")}>
-                    <NumberTranslatorContainer isOnHomepage />
+                    <NumberTranslatorContainer isOnHomepage isJoined/>
                 </div>
             </div>
         );

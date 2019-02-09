@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Label from "components/_ui/Label/Label";
 import NumberDigitsChunk from "components/NumberTranslator/NumberDigitsChunk/NumberDigitsChunk";
 import NumberTextChunk from "components/NumberTranslator/NumberTextChunk/NumberTextChunk";
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import './NumberTranslator.css';
+import oscar from './img-oscar--blue.png';
 
 class NumberTranslatorResult extends Component {
 
@@ -22,13 +24,17 @@ class NumberTranslatorResult extends Component {
     };
 
     render() {
-        const { periodOnes, periodThousands, periodMillions, periodBillions, arrOnes, arrThousands, arrMillions, arrBillions, themes } = this.props;
+        const { isJoined, periodOnes, periodThousands, periodMillions, periodBillions, arrOnes, arrThousands, arrMillions, arrBillions, themes } = this.props;
         return (
-            <div className="NumberTranslator NumberTranslatorResult">
+            <div className={classNames("NumberTranslator NumberTranslatorResult", {
+                'NumberTranslatorResult--isJoined': isJoined
+            })}>
                 <div className="NumberTranslator__translated NumberTranslator__translated--digits">
-                    <Label>
-                        dígitos
-                    </Label>
+                    {arrOnes && (
+                        <Label>
+                            dígitos
+                        </Label>
+                    )}
                     <div className="NumberTranslator__chunks">
                         {arrBillions && (
                             <NumberDigitsChunk
@@ -64,9 +70,16 @@ class NumberTranslatorResult extends Component {
                     </div>
                 </div>
                 <div className="NumberTranslator__translated NumberTranslator__translated--text">
-                    <Label>
-                        en español
-                    </Label>
+                    {/* {!arrOnes && (
+                        <div>
+                            <img src={oscar} />
+                        </div>
+                    )} */}
+                    {arrOnes && (
+                        <Label>
+                            en español
+                        </Label>
+                    )}
                     <div className="NumberTranslator__chunks">
                         {arrBillions && (
                             <NumberTextChunk

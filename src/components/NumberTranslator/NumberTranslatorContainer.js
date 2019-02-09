@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import spanishNumbers from "spanishNumbers.js";
 import NumberTranslatorInput from "components/NumberTranslator/NumberTranslatorInput";
 import NumberTranslatorResult from "components/NumberTranslator/NumberTranslatorResult";
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import _ from "lodash";
 
@@ -398,17 +399,25 @@ class NumberTranslatorContainer extends Component {
     }
 
     render() {
-        const { autofocus } = this.props;
+        const { autofocus, isJoined } = this.props;
         const { value, periodOnes, periodThousands, periodMillions, periodBillions, arrOnes, arrThousands, arrMillions, arrBillions } = this.state;
         return (
-            <div className="NumberTranslatorContainer">
+            <div className={classNames("NumberTranslatorContainer", {
+                'NumberTranslator--isJoined': isJoined
+            })}>
                 <NumberTranslatorInput
+                    className={classNames({
+                        'NumberTranslatorInput--isJoined': isJoined
+                    })}
                     {...this.props}
                     setChunksToTranslate={this.setChunksToTranslate}
                     handleChange={this.handleChange}
+                    isJoined={isJoined}
                     value={value}
-                    autofocus={autofocus} />
+                    autofocus={autofocus}
+                />
                 <NumberTranslatorResult
+                    isJoined={isJoined}
                     periodOnes={periodOnes}
                     periodThousands={periodThousands}
                     periodMillions={periodMillions}
@@ -418,7 +427,8 @@ class NumberTranslatorContainer extends Component {
                     arrThousands={arrThousands}
                     arrMillions={arrMillions}
                     arrBillions={arrBillions}
-                    themes={themes}/>
+                    themes={themes}
+                />
             </div>
         );
     }

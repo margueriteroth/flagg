@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import Label from "components/_ui/Label/Label";
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import './NumberTranslator.css';
 
@@ -29,11 +30,13 @@ class NumberTranslatorInput extends Component {
     }
 
     render() {
-        const { autofocus, handleChange, value } = this.props;
+        const { autofocus, handleChange, isJoined, value } = this.props;
         return (
-            <div className="NumberTranslator NumberTranslatorInput">
+            <div className={classNames("NumberTranslator NumberTranslatorInput", {
+                'NumberTranslatorInput--isJoined': isJoined
+            })}>
                 <Label>
-                    enter a number to convert
+                    Spanish Numbers Translator
                 </Label>
                 <form onSubmit={this.handleSubmit}>
                     <input
@@ -43,7 +46,7 @@ class NumberTranslatorInput extends Component {
                         number={value}
                         value={value}
                         onChange={handleChange}
-                        placeholder={"i.e. 23"}
+                        placeholder={"0 (Enter a number)"}
                         onInput={(e) => {
                             e.target.value && (e.target.value = Math.max(0, parseInt(e.target.value, 10)).toString().slice(0, 12))
                         }}

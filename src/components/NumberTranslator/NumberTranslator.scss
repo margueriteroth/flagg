@@ -4,10 +4,13 @@
     &Input,
     &Result {
         text-align: center;
+
+        &--isJoined {
+            text-align: left;
+        }
     }
 
     &__input {
-        text-align: center;
         font-size: 1.2em;
         border: 1px solid $grey-200;
         border-radius: 4px;
@@ -16,6 +19,8 @@
         padding-right: 12px;
         font-weight: 700;
         margin-top: 1em;
+        width: 100%;
+        max-width: 260px;
 
         &::-webkit-inner-spin-button,
         &::-webkit-outer-spin-button {
@@ -29,8 +34,8 @@
 
         &:focus {
             outline: none;
-            box-shadow: 0 0 3px 1px $blue;
-            border-color: rgba($blue, 0.25);
+            box-shadow: 0 0 3px 1px $blue-500;
+            border-color: rgba($blue-200, 0.25);
         }
 
         @media(max-width: $media-mobile) {
@@ -56,10 +61,39 @@
 
     &.NumberTranslatorInput {
         padding: 5em 3em 3em 3em;
+
+        &--isJoined {
+            padding: 3.5em 3em 3em 3em;
+            background: $blue-400;
+
+            .NumberTranslator__input {
+                border-color: $blue-300;
+
+                &:focus {
+                    box-shadow: 0 0 3px 2px $blue-700;
+                }
+            }
+
+            .Label {
+                color: $white;
+            }
+        }
     }
 
     &.NumberTranslatorResult {
         padding: 2em 3em 4em 3em;
+
+        &--isJoined {
+            padding: 3em 3em 4em 3em;
+
+            .Label {
+                margin-bottom: 1em;
+            }
+
+            .NumberTranslator__chunks {
+                justify-content: flex-start;
+            }
+        }
     }
 
     .NumberDigitsChunk,
@@ -67,6 +101,10 @@
         font-size: 2em;
         margin: 0;
         padding: 1px;
+
+        @media(max-width: $media-mobile) {
+            font-size: 1.75em;
+        }
 
         &__punctuation {
             color: #A39C95;
