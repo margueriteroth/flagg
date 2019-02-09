@@ -21,6 +21,10 @@
         &-large {
             font-size: 0.8em;
             padding: 12px 20px 12px 20px;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
         }
 
         &-small {
@@ -31,25 +35,41 @@
 
     &--primary {
         color: $white;
-        background: $blue;
+        background: $blue-500;
         border-color: $blue;
 
         &:hover {
-            background: desaturate(darken($blue, 8%), 20%);
+            background: desaturate(darken($blue-500, 8%), 20%);
             border-color: desaturate(darken($blue, 8%), 20%);
             cursor: pointer;
+        }
+
+        &.Button--size-large {
+            &:hover {
+                background: $blue-500;
+                border-color: $blue-500;
+                box-shadow: $box-shadow__button--blue;
+            }
         }
     }
 
     &--secondary {
-        color: $blue;
+        color: $blue-500;
         background: transparent;
         background: $white;
-        border-color: $blue;
+        border-color: $blue-500;
 
         &:hover {
-            box-shadow: $box-shadow--hover;
+            box-shadow: $box-shadow__button--grey;
             cursor: pointer;
+        }
+
+        &.Button--size-large {
+            background: $blue-100;
+
+            &:hover {
+                box-shadow: $box-shadow__button--blue;
+            }
         }
     }
 

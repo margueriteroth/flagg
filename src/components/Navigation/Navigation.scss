@@ -36,7 +36,7 @@
         background: $white;
         transition: all 150ms linear;
         color: $black;
-        box-shadow: $box-shadow;
+        box-shadow: $box-shadow--nav;
         height: $navigation-height;
         opacity: 0;
         transform: translateY(-10px);
@@ -137,7 +137,7 @@
 
         &--current {
             color: $text-dark;
-            border-bottom-color: $blue;
+            border-bottom-color: $blue-500;
 
             &:visited {
                 color: $text-dark;

@@ -11,6 +11,19 @@ $grey-700: #565656;
 $grey-800: #333333;
 $grey-900: #000000;
 
+
+$blue-100: #f1f8ff;
+$blue-200: #e3efff;
+$blue-300: #a8ccff;
+$blue-400: #73abff;
+$blue-500: #5393fe;
+$blue-600: #4b84e5;
+$blue-700: #3a67b2;
+$blue-800: #2a4a7f;
+$blue-900: #192c4c;
+
+
+
 $beige: #fcede5;
 $black: $grey-900;
 $blue: #5393fe;
@@ -30,11 +43,24 @@ $yellow: #fdbe00;
 $box-shadow: 0 6px 8px rgba(102,119,136,.03), 0 1px 2px rgba(102,119,136,.2);
 $box-shadow--hover: 0 2px 6px 0px rgba(65, 145, 255, 0.25);
 
+
+
+$box-shadow: 0 7px 48px rgba(102, 119, 136, 0.22);
+$box-shadow--blue: 0 7px 48px rgba(0, 47, 125, 0.12);
+$box-shadow--nav: 0 4px 10px rgba(146, 156, 166, 0.15);
+
+
+$box-shadow__image--blue: 0 7px 48px rgba($blue-800, 0.17);
+$box-shadow__image--grey: 0 7px 56px rgba($grey-700, 0.17);
+
+$box-shadow__button--grey: 0 2px 6px 0px rgba(65, 145, 255, 0.25);
+$box-shadow__button--blue: 0 2px 8px rgba(0, 47, 125, 0.2);
+
 /* Applied colors */
 
 $background: #fffcf9;
 //$background: #fcf3e569;
-//$background: $white;
+$background: $white;
 //$background: $grey-50;
 
 $text-dark: $grey-900;

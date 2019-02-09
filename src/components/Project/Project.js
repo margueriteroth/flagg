@@ -102,7 +102,7 @@ class Project extends Component {
                             />
                             {demo && (
                                 <div className="Project__image__action">
-                                    <Button shape="square" className="Project__image__button"
+                                    <Button shape="square" size="large" className="Project__image__button"
                                             category="secondary" target="_blank">
                                         Go to demo
                                     </Button>

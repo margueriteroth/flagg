@@ -27,11 +27,11 @@ $row-transition: 100ms ease-in-out all;
 
         &--expanded {
             //background: $grey-50;
-            border-top-color: $blue;
+            border-top-color: $blue-500;
             transition: $row-transition;
 
             .BookRow {
-                background: $blue;
+                background: $blue-500;
                 transition: $row-transition;
             }
 
