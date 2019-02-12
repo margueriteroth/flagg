@@ -11,6 +11,7 @@ class BookRow extends Component {
     }
 
     openBook = () => {
+        this.trackEvent('Book Toggle | clicked "' + this.props.title + '"');
         this.setState(prevState => ({
             bookIsClicked: !prevState.bookIsClicked
         }));
