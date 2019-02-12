@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import Bookshelf from "./Bookshelf";
-import BookGenreCharts from "./BookGenreCharts";
-//import Label from "../_ui/Label/Label";
+//import BookGenreCharts from "./BookGenreCharts";
 import books from "books.js";
 
 class BookshelfContainer extends Component {
@@ -87,6 +86,9 @@ class BookshelfContainer extends Component {
                 <h2 className="Bookshelf__header">
                     <span role="img" aria-label="emoji" className="Bookshelf__header__emoji emoji">📚</span> Bookshelf
                 </h2>
+                <p>
+                    What I'm reading and what I've read.
+                </p>
                 {/* <Button onClick={this.toggleBookListStyle} style={{"marginBottom": "10px"}}>
                     Change to {bookListRows ? "cards" : "rows"}
                 </Button> */}
