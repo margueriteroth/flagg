@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import Bookshelf from "./Bookshelf";
 //import BookGenreCharts from "./BookGenreCharts";
-//import Label from "../_ui/Label/Label";
+import books from "books.js";
 
 class BookshelfContainer extends Component {
     state = {
@@ -13,12 +13,12 @@ class BookshelfContainer extends Component {
         graphIsShowingGenres: true,
         categoryColors: ["#d8d0c9", "#c7bcb2"],
         genreColors: ["#f5cf63", "#afd89f", "#ffa79e", "#7aa8f7", "#ada3ff",
-            "#7f7f7f", " #ff8075", "#a9a0f7", "#7faefa", "#7faeff",],
+            "#7f7f7f", "#ff8075", "#a9a0f7", "#7faefa", "#7faeff",],
         bookListRows: true,
     }
 
     showMoreBooks = () => {
-        const totalBooks = this.props.books.length;
+        const totalBooks = books.length;
 
         ReactGA.event({
             category: 'User',
@@ -33,7 +33,6 @@ class BookshelfContainer extends Component {
     };
 
     getGenreCounts() {
-        const { books } = this.props;
         const { categoryColors, genreColors } = this.state;
         const fullGenreList = [];
         let counts = {};
@@ -63,10 +62,10 @@ class BookshelfContainer extends Component {
             }
         });
 
-        let { categories, genres } = { ...this.state };
-        genres = genresDict;
-        categories = categoriesDict;
-        this.setState({ categories, genres });
+        let { categoriesList, genresList } = { ...this.state };
+        genresList = genresDict;
+        categoriesList = categoriesDict;
+        this.setState({ categoriesList, genresList });
     }
 
     toggleBookListStyle = () => {
@@ -80,14 +79,16 @@ class BookshelfContainer extends Component {
     }
 
     render() {
-        const { books } = this.props;
-        const { bookListRows, booksToShow, categories, categoryColors, expanded, genres, genreColors } = this.state;
+        const { bookListRows, booksToShow, categories, categoryColors, expanded, genresList, genreColors } = this.state;
 
         return (
             <div className="BookshelfContainer">
                 <h2 className="Bookshelf__header">
                     <span role="img" aria-label="emoji" className="Bookshelf__header__emoji emoji">📚</span> Bookshelf
                 </h2>
+                <p>
+                    What I'm reading and what I've read.
+                </p>
                 {/* <Button onClick={this.toggleBookListStyle} style={{"marginBottom": "10px"}}>
                     Change to {bookListRows ? "cards" : "rows"}
                 </Button> */}
@@ -101,7 +102,7 @@ class BookshelfContainer extends Component {
                     books={books}
                     booksToShow={booksToShow}
                     categories={categories}
-                    genres={genres}
+                    genresList={genresList}
                     categoryColors={categoryColors}
                     genreColors={genreColors}
                     bookListRows={bookListRows}

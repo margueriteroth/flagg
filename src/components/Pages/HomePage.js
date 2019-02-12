@@ -5,7 +5,6 @@ import Project from "components/Project/Project";
 import ProjectCrochet from "components/Project/ProjectCrochet";
 import ProjectNumbers from "components/Project/ProjectNumbers";
 import projects from "projects.js";
-import books from "books.js";
 
 class HomePage extends Component {
     constructor(props) {
@@ -15,7 +14,6 @@ class HomePage extends Component {
 
     state = {
         projects: projects,
-        books: books,
         crochetRandomY: [],
     }
 
@@ -29,7 +27,7 @@ class HomePage extends Component {
     }
 
     render() {
-        const { books, projects } = this.state;
+        const { projects } = this.state;
         const { routerProps } = this.props;
         return (
             <div className="HomePage">
@@ -51,7 +49,7 @@ class HomePage extends Component {
                         />
                     )}
                     <ProjectNumbers />
-                    {/* <BookshelfContainer books={books} /> */}
+                    <BookshelfContainer />
                 </div>
             </div>
         );

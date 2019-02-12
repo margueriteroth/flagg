@@ -1,3 +1,5 @@
+$border-radius--200: 2px;
+$border-radius--300: 3px;
 $border-radius--400: 4px;
 $border-radius--500: 5px;
 $border-radius--600: 8px;
@@ -22,9 +24,12 @@ $max-width__navigation--l: $max-width__content--l;
 // Media query widths
 $media-mobile: 520px;
 $media-tablet: 767px;
+$media-desktop: 1100px;
 $media-tablet--include: 768px;
 
 
 //BookRows: Seen in in Bookshelf.scss and BookRow.scss
-$BookRow__grid: minmax(200px, 570px) 1fr 170px 44px;
+$BookRow__grid: 1fr 170px 44px;
+$BookRow__grid--tablet: 1fr 120px 44px;
+$BookRow__grid--mobile: 1fr 120px;
 $BookRow__grid-gap: 15px;
