@@ -8,22 +8,22 @@ import './Bookshelf.css';
 class Bookshelf extends Component {
 
     render() {
-        const { books, booksToShow, categories, expanded, genres, showMoreBooks } = this.props;
+        const { books, booksToShow, categories, expanded, genreColors, genresList, showMoreBooks } = this.props;
 
         return (
             <Card className="Bookshelf" padding>
                 <div className="Bookshelf__books__container">
                     <div className="BookRowLabels">
                         <Label category="table" className="BookRowLabel">
-                            Title
+                            Book
                         </Label>
-                        <Label category="table" className="BookRowLabel BookRowLabel--author">
+                        {/* <Label category="table" className="BookRowLabel BookRowLabel--author">
                             Author
-                        </Label>
+                        </Label> */}
                         <Label category="table" className="BookRowLabel BookRowLabel--genre">
-                            Genres
+                            Genre
                         </Label>
-                        <Label category="table" className="BookRowLabel">
+                        <Label category="table" className="BookRowLabel BookRowLabel--status">
                             Status
                         </Label>
                     </div>
@@ -34,9 +34,14 @@ class Bookshelf extends Component {
                             categories={categories}
                             color={this.findColor}
                             coverImg={books[key].coverImg}
-                            genres={genres}
+
+                            genre={books[key].genre}
+                            genresList={genresList}
+                            genreColors={genreColors}
+                            goodreadsUrl={books[key].goodreadsUrl}
                             finished={books[key].finished}
                             inProgress={books[key].inProgress}
+                            isFiction={books[key].isFiction}
                             title={books[key].title}
                             tags={books[key].tags}
                             key={key}

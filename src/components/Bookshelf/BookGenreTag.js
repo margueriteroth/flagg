@@ -1,31 +1,44 @@
 import React, { Component } from 'react';
 import Label from "../_ui/Label/Label";
-
 import './BookGenreTag.css';
-
 class BookGenreTag extends Component {
     state = {
-        tagColor: [],
+        genreColor: [],
     }
 
-    setTagColor = () => {
-        const { categories, genres, tag } = this.props;
-        const categoriesAndGenres = categories.concat(genres);
-        const tagObject = categoriesAndGenres.find(i => i.genre === tag);
-        this.setState({ tagColor: tagObject.color });
+    setGenreColor = () => {
+        const { genre, genresList } = this.props;
+        const genreObject = genresList.find(i => i.genre === genre);
+
+        console.log(genreObject);
+        this.setState({ genreColor: genreObject.color });
     }
 
     componentDidMount() {
-        this.setTagColor();
+        this.setGenreColor();
     }
 
     render() {
-        const { tag } = this.props;
-        const { tagColor } = this.state;
+        const { genre } = this.props;
+        const { genreColor } = this.state;
+
+        const style = {
+            backgroundColor: genreColor + '33',
+            color: genreColor,
+            border: '1px solid',
+            borderColor: genreColor + '75',
+        }
+
         return (
-            <Label className="BookGenreTag" style={{background: tagColor}}>
-                {tag}
-            </Label>
+            <div className="BookGenreTag__container">
+                <div className="BookGenreTag__white-container"></div>
+                <Label className="BookGenreTag" style={style}>
+                    <div className="BookGenreTag__darkened-text">
+                        {genre}
+                    </div>
+                    {genre}
+                </Label>
+            </div>
         );
     }
 }
