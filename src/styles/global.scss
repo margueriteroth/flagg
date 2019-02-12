@@ -60,14 +60,15 @@ body {
     flex-grow: 1;
     //height: 1000px;
 
+    @media(min-width: 1700px) {
+        max-width: $max-width__content--l;
+    }
+
     @media(max-width: $media-mobile) {
         padding-left: $padding-horizontal--mobile;
         padding-right: $padding-horizontal--mobile;
         padding-bottom: 6em;
-    }
-
-    @media(min-width: 1700px) {
-        max-width: $max-width__content--l;
+        margin-top: 80px;
     }
 }
 
