@@ -56,6 +56,12 @@
             }
         }
 
+        &--status {
+            @media(max-width: $media-mobile) {
+                grid-column: 3;
+            }
+        }
+
         &s {
             display: grid;
             grid-template-columns: $BookRow__grid;
