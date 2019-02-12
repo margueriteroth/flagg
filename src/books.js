@@ -1,5 +1,5 @@
 import React from "react";
-//Help — book API, where r u?
+//Help — book API, where r u? GoogleBooks? wip
 //Summaries and images from goodreads.com
 
 const books = [
@@ -22,7 +22,7 @@ const books = [
     //             The California courts sentenced her harshly: twenty-four years to life. But in
     //             the wake of Cinnamon's murder conviction, thanks in part to two determined lawmen,
     //             the twisted private world of David Brown himself unfolded with astonishing clarity
-    //             -- revealing a trail of perverse love, twisted secrets, and evil mind games.
+    //             — revealing a trail of perverse love, twisted secrets, and evil mind games.
     //         </p>
     //         <p>
     //             A complex and often dangerous investigation suggested a horrifying scenario: Was
@@ -35,20 +35,59 @@ const books = [
     //     </div>
     // },
     {
-        title: "Class Trip & The Mustache",
-        author: "Emmanuel Carrere",
+        title: "The Outsider",
+        author: "Stephen King",
         finished: "",
         inProgress: true,
         "tags": [
             "fiction",
+            "horror",
+        ],
+        isFiction: true,
+        genre: "horror",
+        goodreadsUrl: "https://www.goodreads.com/book/show/36124936-the-outsider",
+        coverImg: "https://images.gr-assets.com/books/1524596540l/36124936.jpg",
+        summary: <div>
+            <p>
+                An unspeakable crime. A confounding investigation. At a time when
+                the King brand has never been stronger, he has delivered one of his most unsettling and compulsively readable stories.
+            </p>
+            <p>
+                An eleven-year-old boy’s violated corpse is found in a town park.
+                Eyewitnesses and fingerprints point unmistakably to one of Flint
+                City’s most popular citizens. He is Terry Maitland, Little League
+                coach, English teacher, husband, and father of two girls. Detective
+                Ralph Anderson, whose son Maitland once coached, orders a quick
+                and very public arrest. Maitland has an alibi, but Anderson and
+                the district attorney soon add DNA evidence to go with the fingerprints
+                and witnesses. Their case seems ironclad.
+            </p>
+            <p>
+                As the investigation expands and horrifying answers begin to emerge,
+                King’s propulsive story kicks into high gear, generating strong
+                tension and almost unbearable suspense. Terry Maitland seems like
+                a nice guy, but is he wearing another face? When the answer comes,
+                it will shock you as only Stephen King can.
+            </p>
+        </div>
+    },
+    {
+        title: "Class Trip & The Mustache",
+        author: "Emmanuel Carrere",
+        finished: 2018,
+        inProgress: false,
+        "tags": [
+            "fiction",
             "mystery",
         ],
+        genre: "mystery",
+        isFiction: true,
         goodreadsUrl: "https://www.goodreads.com/book/show/340240.Two_by_Carr_re",
         coverImg: "https://images.gr-assets.com/books/1388849971l/340240.jpg",
         summary: <div>
             <p>
-                Two harrowing tales of pyschological suspense--hailed as " stunning"
-                (John Updike)--from the mathematician of horror.
+                Two harrowing tales of pyschological suspense—hailed as " stunning"
+                (John Updike)—from the mathematician of horror.
             </p>
             <p>
                 Two by Carrere brings together the greatest works of Emmanuel Carrere,
@@ -69,7 +108,7 @@ const books = [
                 excursion. Prone to lurid imaginings of kidnappings and organ
                 thefts, Nicolas watches his fantasies grow horrifyingly real
                 when a local child disappears. Nicolas takes it upon himself
-                to investigate, fearlessly playing detective--until he uncovers
+                to investigate, fearlessly playing detective—until he uncovers
                 the devastating truth. Dramatic, taut with intensity, Carrere's
                 depictions of the terrifying anxieties and shifting realities of
                 modern life are marvels of concentrated emotion.
@@ -85,6 +124,8 @@ const books = [
             "non-fiction",
             "memoir",
         ],
+        genre: "memoir",
+        isFiction: false,
         goodreadsUrl: "https://www.goodreads.com/book/show/33313.Kitchen_Confidential",
         coverImg: "https://images.gr-assets.com/books/1433739086l/33313.jpg",
         summary: <div>
@@ -110,6 +151,8 @@ const books = [
             "non-fiction",
             "true crime",
         ],
+        genre: "true crime",
+        isFiction: false,
         goodreadsUrl: "https://www.goodreads.com/book/show/34397551-the-chickenshit-club",
         coverImg: "https://images.gr-assets.com/books/1499862781l/34397551.jpg",
         summary: <div>
@@ -143,12 +186,14 @@ const books = [
     {
         title: "The Indifferent Stars Above: The Harrowing Saga of a Donner Party Bride",
         author: "Daniel James Brown",
-        inProgress: true,
+        inProgress: false,
         audiobook: true,
         "tags": [
             "non-fiction",
             "biography",
         ],
+        genre: "biography",
+        isFiction: false,
         goodreadsUrl: "https://www.goodreads.com/book/show/6033525-the-indifferent-stars-above",
         coverImg: "https://images.gr-assets.com/books/1438825353l/6033525.jpg",
         summary: <div>
@@ -178,6 +223,8 @@ const books = [
             "non-fiction",
             "medicine",
         ],
+        genre: "medicine",
+        isFiction: false,
         goodreadsUrl: "https://www.goodreads.com/book/show/1226104.Pain_Killer",
         coverImg: "https://images.gr-assets.com/books/1312051807l/1226104.jpg",
         summary: <div>
@@ -213,6 +260,8 @@ const books = [
             "non-fiction",
             "true crime",
         ],
+        genre: "true crime",
+        isFiction: false,
         goodreadsUrl: "https://www.goodreads.com/book/show/15654.The_Stranger_Beside_Me",
         coverImg: "https://images.gr-assets.com/books/1330072383l/15654.jpg",
         summary: <div>
@@ -231,6 +280,8 @@ const books = [
             "non-fiction",
             "technology",
         ],
+        genre: "technology",
+        isFiction: false,
         goodreadsUrl: "https://www.goodreads.com/book/show/25814544-sprint",
         coverImg: "https://images.gr-assets.com/books/1457284924l/25814544.jpg",
         summary: <div>
@@ -276,6 +327,8 @@ const books = [
             "non-fiction",
             "true crime",
         ],
+        genre: "true crime",
+        isFiction: false,
         goodreadsUrl: "https://www.goodreads.com/book/show/35068432-i-ll-be-gone-in-the-dark",
         coverImg: "https://images.gr-assets.com/books/1499131009l/35068432.jpg",
         summary: <div>
@@ -327,7 +380,7 @@ const books = [
         </div>
     },
     {
-        title: "Bad Blood",
+        title: "Bad Blood: Secrets and Lies in a Silicon Valley Startup",
         author: "John Carreyrou",
         finished: 2018,
         audiobook: true,
@@ -335,33 +388,29 @@ const books = [
             "non-fiction",
             "true crime",
         ],
-        goodreadsUrl: "https://www.goodreads.com/book/show/34397551-the-chickenshit-club?from_search=true",
-        coverImg: "https://images.gr-assets.com/books/1499862781l/34397551.jpg",
+        genre: "true crime",
+        isFiction: false,
+        goodreadsUrl: "https://www.goodreads.com/book/show/37976541-bad-blood",
+        coverImg: "https://images.gr-assets.com/books/1525180824l/37976541.jpg",
         summary: <div>
             <p>
-                From Pulitzer Prize–winning journalist Jesse Eisinger, “a fast moving, fly-on-the-wall,
-                disheartening look at the deterioration of the Justice Department and the Securities and
-                Exchange Commission…It is a book of superheroes” (San Franscisco Review of Books).
+                The full inside story of the breathtaking rise and shocking collapse of Theranos,
+                the multibillion-dollar biotech startup, by the prize-winning journalist who first
+                broke the story and pursued it to the end, despite pressure from its charismatic
+                CEO and threats by her lawyers.
             </p>
             <p>
-                Why were no bankers put in prison after the financial crisis of 2008? Why do CEOs seem
-                to commit wrongdoing with impunity? The problem goes beyond banks deemed “Too Big to
-                Fail” to almost every large corporation in America—to pharmaceutical companies and auto
-                manufacturers and beyond. <i>The Chickenshit Club</i>—an inside reference to prosecutors too
-                scared of failure and too daunted by legal impediments to do their jobs—explains why
-                in “an absorbing financial history, a monumental work of journalism… a first-rate study
-                of the federal bureaucracy” (<i>Bloomberg Businessweek</i>).
+                In 2014, Theranos founder and CEO Elizabeth Holmes was widely seen as the female
+                Steve Jobs: a brilliant Stanford dropout whose startup "unicorn" promised to
+                revolutionize the medical industry with a machine that would make blood testing
+                significantly faster and easier. Backed by investors such as Larry Ellison and
+                Tim Draper, Theranos sold shares in a fundraising round that valued the company
+                at more than $9 billion, putting Holmes's worth at an estimated $4.7 billion.
+                There was just one problem: The technology didn't work.
             </p>
             <p>
-                Jesse Eisigner begins the story in the 1970s, when the government pioneered the notion
-                that top corporate executives, not just seedy crooks, could commit heinous crimes and
-                go to prison. He brings us to trading desks on Wall Street, to corporate boardrooms and
-                the offices of prosecutors and FBI agents. These revealing looks provide context for the
-                evolution of the Justice Department’s approach to pursuing corporate criminals through
-                the early 2000s and into the Justice Department’s approach to pursuing corporate criminals
-                through the early 2000s and into the Justice Department of today, including the
-                prosecutorial fiascos, corporate lobbying, trial losses, and culture shifts that have
-                stripped the government of the will and ability to prosecute top corporate executives.
+                A riveting story of the biggest corporate fraud since Enron, a tale of ambition
+                and hubris set amid the bold promises of Silicon Valley.
             </p>
         </div>
     },
@@ -373,33 +422,19 @@ const books = [
             "fiction",
             "horror"
         ],
-        goodreadsUrl: "https://www.goodreads.com/book/show/34397551-the-chickenshit-club?from_search=true",
-        coverImg: "https://images.gr-assets.com/books/1499862781l/34397551.jpg",
+        genre: "horror",
+        isFiction: true,
+        goodreadsUrl: "https://www.goodreads.com/book/show/10614.Misery",
+        coverImg: "https://images.gr-assets.com/books/1270545451l/10614.jpg",
         summary: <div>
             <p>
-                From Pulitzer Prize–winning journalist Jesse Eisinger, “a fast moving, fly-on-the-wall,
-                disheartening look at the deterioration of the Justice Department and the Securities and
-                Exchange Commission…It is a book of superheroes” (San Franscisco Review of Books).
-            </p>
-            <p>
-                Why were no bankers put in prison after the financial crisis of 2008? Why do CEOs seem
-                to commit wrongdoing with impunity? The problem goes beyond banks deemed “Too Big to
-                Fail” to almost every large corporation in America—to pharmaceutical companies and auto
-                manufacturers and beyond. <i>The Chickenshit Club</i>—an inside reference to prosecutors too
-                scared of failure and too daunted by legal impediments to do their jobs—explains why
-                in “an absorbing financial history, a monumental work of journalism… a first-rate study
-                of the federal bureaucracy” (<i>Bloomberg Businessweek</i>).
-            </p>
-            <p>
-                Jesse Eisigner begins the story in the 1970s, when the government pioneered the notion
-                that top corporate executives, not just seedy crooks, could commit heinous crimes and
-                go to prison. He brings us to trading desks on Wall Street, to corporate boardrooms and
-                the offices of prosecutors and FBI agents. These revealing looks provide context for the
-                evolution of the Justice Department’s approach to pursuing corporate criminals through
-                the early 2000s and into the Justice Department’s approach to pursuing corporate criminals
-                through the early 2000s and into the Justice Department of today, including the
-                prosecutorial fiascos, corporate lobbying, trial losses, and culture shifts that have
-                stripped the government of the will and ability to prosecute top corporate executives.
+                Novelist Paul Sheldon has plans to make the difficult transition from writing
+                historical romances featuring heroine Misery Chastain to publishing literary
+                fiction. Annie Wilkes, Sheldon's number one fan, rescues the author from the
+                scene of a car accident. The former nurse takes care of him in her remote house,
+                but becomes irate when she discovers that the author has killed Misery off in
+                his latest book. Annie keeps Sheldon prisoner while forcing him to write a book
+                that brings Misery back to life.
             </p>
         </div>
     },
@@ -412,33 +447,18 @@ const books = [
             "fiction",
             "horror"
         ],
-        goodreadsUrl: "https://www.goodreads.com/book/show/34397551-the-chickenshit-club?from_search=true",
-        coverImg: "https://images.gr-assets.com/books/1499862781l/34397551.jpg",
+        genre: "horror",
+        isFiction: true,
+        goodreadsUrl: "https://www.goodreads.com/book/show/149267.The_Stand",
+        coverImg: "https://images.gr-assets.com/books/1213131305l/149267.jpg",
         summary: <div>
             <p>
-                From Pulitzer Prize–winning journalist Jesse Eisinger, “a fast moving, fly-on-the-wall,
-                disheartening look at the deterioration of the Justice Department and the Securities and
-                Exchange Commission…It is a book of superheroes” (San Franscisco Review of Books).
-            </p>
-            <p>
-                Why were no bankers put in prison after the financial crisis of 2008? Why do CEOs seem
-                to commit wrongdoing with impunity? The problem goes beyond banks deemed “Too Big to
-                Fail” to almost every large corporation in America—to pharmaceutical companies and auto
-                manufacturers and beyond. <i>The Chickenshit Club</i>—an inside reference to prosecutors too
-                scared of failure and too daunted by legal impediments to do their jobs—explains why
-                in “an absorbing financial history, a monumental work of journalism… a first-rate study
-                of the federal bureaucracy” (<i>Bloomberg Businessweek</i>).
-            </p>
-            <p>
-                Jesse Eisigner begins the story in the 1970s, when the government pioneered the notion
-                that top corporate executives, not just seedy crooks, could commit heinous crimes and
-                go to prison. He brings us to trading desks on Wall Street, to corporate boardrooms and
-                the offices of prosecutors and FBI agents. These revealing looks provide context for the
-                evolution of the Justice Department’s approach to pursuing corporate criminals through
-                the early 2000s and into the Justice Department’s approach to pursuing corporate criminals
-                through the early 2000s and into the Justice Department of today, including the
-                prosecutorial fiascos, corporate lobbying, trial losses, and culture shifts that have
-                stripped the government of the will and ability to prosecute top corporate executives.
+                This is the way the world ends: with a nanosecond of computer error in a
+                Defense Department laboratory and a million casual contacts that form the
+                links in a chain letter of death. And here is the bleak new world of the
+                day after: a world stripped of its institutions and emptied of 99 percent
+                of its people. A world in which a handful of panicky survivors choose
+                sides — or are chosen.
             </p>
         </div>
     },
@@ -449,8 +469,39 @@ const books = [
         reread: true,
         "tags": [
             "fiction",
-            "children's literature",
-        ]
+            "children's lit",
+        ],
+        genre: "children's lit",
+        isFiction: true,
+        goodreadsUrl: "https://www.goodreads.com/book/show/39988.Matilda",
+        coverImg: "https://images.gr-assets.com/books/1388793265l/39988.jpg",
+        summary: <div>
+            <p>
+                Matilda is a little girl who is far too good to be true. At age
+                five-and-a-half she's knocking off double-digit multiplication
+                problems and blitz-reading Dickens. Even more remarkably, her
+                classmates love her even though she's a super-nerd and the
+                teacher's pet. But everything is not perfect in Matilda's world.
+                For starters she has two of the most idiotic, self-centered
+                parents who ever lived. Then there's the large, busty nightmare
+                of a school principal, Miss ("The") Trunchbull, a former
+                hammer-throwing champion who flings children at will and
+                is approximately as sympathetic as a bulldozer. Fortunately
+                for Matilda, she has the inner resources to deal with such
+                annoyances: astonishing intelligence, saintly patience, and
+                an innate predilection for revenge.
+            </p>
+            <p>
+                She warms up with some practical jokes aimed at her hapless parents,
+                but the true test comes when she rallies in defense of her teacher,
+                the sweet Miss Honey, against the diabolical Trunchbull. There is
+                never any doubt that Matilda will carry the day. Even so, this
+                wonderful story is far from predictable. Roald Dahl, while keeping
+                the plot moving imaginatively, also has an unerring ear for emotional
+                truth. The reader cares about Matilda because in addition to all her
+                other gifts, she has real feelings.
+            </p>
+        </div>
     },
     {
         title: "Stranger With My Face",
@@ -460,7 +511,19 @@ const books = [
         "tags": [
             "fiction",
             "horror",
-        ]
+        ],
+        genre: "horror",
+        isFiction: true,
+        goodreadsUrl: "https://www.goodreads.com/book/show/838768.Stranger_with_My_Face",
+        coverImg: "https://images.gr-assets.com/books/1348021085l/838768.jpg",
+        summary: <div>
+            <p>
+                Laurie was at home, but her boyfriend swears he saw her on the beach
+                with another guy. Her family insists they see her coming and going
+                when she's been out of the house for hours. Who—or what—is taking
+                over Laurie's life?
+            </p>
+        </div>
     },
     {
         title: "Before the Fall",
@@ -469,17 +532,77 @@ const books = [
         "tags": [
             "fiction",
             "mystery"
-        ]
+        ],
+        genre: "mystery",
+        isFiction: true,
+        goodreadsUrl: "https://www.goodreads.com/book/show/40670008-before-the-fall",
+        coverImg: "https://images.gr-assets.com/books/1530290179l/40670008.jpg",
+        summary: <div>
+            <p>
+                From the Emmy, PEN, Peabody, Critics' Choice, and Golden Globe
+                Award-winning creator of the TV show Fargo comes the thriller
+                of the year.
+            </p>
+            <p>
+                On a foggy summer night, 11 people - 10 privileged, one down-on-his-luck
+                painter - depart Martha's Vineyard on a private jet headed for New
+                York. Sixteen minutes later the unthinkable happens: The plane plunges
+                into the ocean. The only survivors are Scott Burroughs - the painter -
+                and a four-year-old boy who is now the last remaining member of an
+                immensely wealthy and powerful media mogul's family.
+            </p>
+            <p>
+                With chapters weaving between the aftermath of the crash and the
+                backstories of the passengers and crew members - including a Wall
+                Street titan and his wife, a Texan-born party boy just in from
+                London, a young woman questioning her path in life, and a career
+                pilot - the mystery surrounding the tragedy heightens. As the
+                passengers' intrigues unravel, odd coincidences point to a
+                conspiracy. Was it merely by dumb chance that so many influential
+                people perished? Or was something far more sinister at work?
+                Events soon threaten to spiral out of control in an escalating
+                storm of media outrage and accusations. And while Scott struggles
+                to cope with fame that borders on notoriety, the authorities
+                scramble to salvage the truth from the wreckage.
+            </p>
+            <p>
+                Amid pulse-quickening suspense, the fragile relationship between
+                Scott and the young boy glows at the heart of this stunning novel,
+                raising questions of fate, human nature, and the inextricable ties
+                that bind us together.
+            </p>
+        </div>
     },
     {
-        foo: 1,
         title: "Altered Carbon",
         author: "Richard Morgan",
         finished: 2018,
         "tags": [
             "fiction",
             "sci-fi",
-        ]
+        ],
+        genre: "sci-fi",
+        isFiction: true,
+        goodreadsUrl: "https://www.goodreads.com/book/show/40792913-altered-carbon",
+        coverImg: "https://images.gr-assets.com/books/1531415180l/40792913.jpg",
+        summary: <div>
+            <p>
+                Four hundred years from now mankind is strung out across a region of
+                interstellar space inherited from an ancient civilization discovered
+                on Mars. The colonies are linked together by the occasional sublight
+                colony ship voyages and hyperspatial data-casting. Human consciousness
+                is digitally freighted between the stars and downloaded into bodies as
+                a matter of course.
+            </p>
+            <p>
+                But some things never change. So when ex-envoy, now-convict Takeshi
+                Kovacs has his consciousness and skills downloaded into the body of
+                a nicotine-addicted ex-thug and presented with a catch-22 offer, he
+                really shouldn't be surprised. Contracted by a billionaire to discover
+                who murdered his last body, Kovacs is drawn into a terrifying conspiracy
+                that stretches across known space and to the very top of society.
+            </p>
+        </div>
     },
     {
         title: "Interactive Data Visualization for the Web: An Introduction to Designing with D3",
@@ -488,17 +611,76 @@ const books = [
         "tags": [
             "non-fiction",
             "technology",
-        ]
+        ],
+        genre: "technology",
+        isFiction: false,
+        goodreadsUrl: "https://www.goodreads.com/book/show/16087610-interactive-data-visualization-for-the-web",
+        coverImg: "https://images.gr-assets.com/books/1350959444l/16087610.jpg",
+        summary: <div>
+            <p>
+                Create and publish your own interactive data visualization projects
+                on the Web—even if you have little or no experience with data
+                visualization or web development. It’s easy and fun with this
+                practical, hands-on introduction. Author Scott Murray teaches
+                you the fundamental concepts and methods of D3, a JavaScript
+                library that lets you express data visually in a web browser.
+                Along the way, you’ll expand your web programming skills,
+                using tools such as HTML and JavaScript.
+            </p>
+            <p>
+                This step-by-step guide is ideal whether you’re a designer or
+                visual artist with no programming experience, a reporter
+                exploring the new frontier of data journalism, or anyone
+                who wants to visualize and share data.
+            </p>
+            <ul>
+                <li>
+                    Learn HTML, CSS, JavaScript, and SVG basics
+                </li>
+                <li>
+                    Dynamically generate web page elements from your data—and
+                    choose visual encoding rules to style them
+                </li>
+                <li>
+                    Create bar charts, scatter plots, pie charts, stacked bar
+                    charts, and force-directed layouts
+                </li>
+                <li>
+                    Use smooth, animated transitions to show changes in your data
+                </li>
+                <li>
+                    Introduce interactivity to help users explore data through
+                    different views
+                </li>
+                <li>
+                    Explore hands-on with downloadable code and over 100 examples
+                </li>
+            </ul>
+        </div>
     },
     {
-        title: "Trapped",
+        title: "Trapped (Fear Street #51)",
         author: "R. L. Stine",
         finished: 2018,
         reread: true,
         "tags": [
             "fiction",
             "horror",
-        ]
+        ],
+        genre: "horror",
+        isFiction: false,
+        goodreadsUrl: "https://www.goodreads.com/book/show/176552.Trapped",
+        coverImg: "https://images.gr-assets.com/books/1387662990l/176552.jpg",
+        summary: <div>
+            <p>
+                Some kids in the sixties used to party in the tunnels under
+                Shadyside High, until something left a bunch of people dead.
+                But that's just a story, right? Besides, exploring the tunnels
+                is more fun than being stuck in Saturday detention. Too bad
+                there's no turning back—because in the tunnels there's no one
+                around to hear your screams.
+            </p>
+        </div>
     },
 ];
 
