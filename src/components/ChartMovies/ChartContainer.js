@@ -19,7 +19,6 @@ export default ChartComponent => (
 
         componentWillUnmount() {
             window.removeEventListener('resize', this.fitParentContainer);
-            console.log('unmount');
         }
 
         fitParentContainer() {

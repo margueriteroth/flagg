@@ -9,8 +9,6 @@ class BookGenreTag extends Component {
     setGenreColor = () => {
         const { genre, genresList } = this.props;
         const genreObject = genresList.find(i => i.genre === genre);
-
-        console.log(genreObject);
         this.setState({ genreColor: genreObject.color });
     }
 

@@ -1,5 +1,4 @@
 export function humanizeDuration() {
-    console.log('humanizing');
     var languages = {
         ar: {
             y: function (c) { return c === 1 ? 'سنة' : 'سنوات' },
