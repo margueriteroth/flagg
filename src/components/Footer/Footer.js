@@ -20,7 +20,7 @@ class Footer extends Component {
             <div className="Footer__container">
                 <div className="Footer">
                     <div className="Footer__section Footer__section__links">
-                        <Label>
+                        <Label className="Footer__label">
                             <a className="Footer__link"
                                 onClick={() => this.trackEvent('Footer | clicked Codepen')}
                                 href="http://codepen.io/marguerite"
@@ -28,7 +28,7 @@ class Footer extends Component {
                                 Codepen
                             </a>
                         </Label>
-                        <Label>
+                        <Label className="Footer__label">
                             <a className="Footer__link"
                                 onClick={() => this.trackEvent('Footer | clicked Github')}
                                 href="http://www.github.com/margueriteroth"
@@ -36,7 +36,7 @@ class Footer extends Component {
                                 Github
                             </a>
                         </Label>
-                        <Label>
+                        <Label className="Footer__label">
                             <a className="Footer__link"
                                 onClick={() => this.trackEvent('Footer | clicked Dribbble')}
                                 href="http://www.dribbble.com/marrrguerite"
@@ -44,12 +44,20 @@ class Footer extends Component {
                                 Dribbble
                             </a>
                         </Label>
-                        <Label>
+                        <Label className="Footer__label">
                             <a className="Footer__link"
                                 onClick={() => this.trackEvent('Footer | clicked Giphy')}
                                 href="https://giphy.com/channel/marrrguerite"
                                 rel="noopener noreferrer" target="_blank">
                                 Giphy
+                            </a>
+                        </Label>
+                        <Label className="Footer__label">
+                            <a className="Footer__link"
+                                onClick={() => this.trackEvent('Footer | clicked Instagram')}
+                                href="https://www.instagram.com/marguer.ite"
+                                rel="noopener noreferrer" target="_blank">
+                                Instagram
                             </a>
                         </Label>
                     </div>
