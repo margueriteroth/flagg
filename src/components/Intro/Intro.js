@@ -28,9 +28,12 @@ class Intro extends Component {
                 <h1 className="Intro__header">
                     Hi, I'm Marguerite, a product designer and developer
                 </h1>
-                <h2 className="Intro__subheader">
+                <h3 className="Intro__subheader">
                     I design interfaces, create digital experiences, and explore data.
-                </h2>
+                    Currently design and UX at <a href="https://www.parse.ly/"
+                        onClick={() => this.trackEvent('Intro | clicked Parse.ly')}
+                        rel="noopener noreferrer" target="_blank">Parse.ly</a>
+                </h3>
 
                 <div className="Intro__contact">
                     <AnchorLink href='#projects' offset="156">
