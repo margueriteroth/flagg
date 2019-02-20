@@ -35,6 +35,65 @@ const books = [
     //     </div>
     // },
     {
+        title: "Info We Trust: How to Inspire the World with Data",
+        author: "RJ Andrews",
+        finished: "",
+        inProgress: true,
+        "tags": [
+            "non-fiction",
+            "design",
+        ],
+        isFiction: true,
+        genre: "design",
+        goodreadsUrl: "https://www.goodreads.com/book/show/39967323-info-we-trust",
+        coverImg: "https://images.gr-assets.com/books/1528399699l/39967323.jpg",
+        summary: <div>
+            <p>
+                How do we create new ways of looking at the world? Join award-winning
+                data storyteller RJ Andrews as he pushes beyond the usual how-to, and
+                takes you on an adventure into the rich art of informing.
+            </p>
+            <p>
+                Creating <i>Info We Trust</i> is a craft that puts the world into forms
+                that are strong and true. It begins with maps, diagrams, and charts --
+                but must push further than dry defaults to be truly effective. How do
+                we attract attention? How can we offer audiences valuable experiences
+                worth their time? How can we help people access complexity?
+            </p>
+            <p>
+                Dark and mysterious, but full of potential, data is the raw material
+                from which new understanding can emerge. Become a hero of the information
+                age as you learn how to dip into the chaos of data and emerge with new
+                understanding that can entertain, improve, and inspire. Whether you call
+                the craft data storytelling, data visualization, data journalism, dashboard
+                design, or infographic creation -- what matters is that you are courageously
+                confronting the chaos of it all in order to improve how people see the world.
+                <i>Info We Trust</i> is written for everyone who straddles the domains of
+                data and people: data visualization professionals, analysts, and all who
+                are enthusiastic for seeing the world in new ways.
+            </p>
+            <p>
+                This book draws from the entirety of human experience, quantitative and
+                poetic. It teaches advanced techniques, such as visual metaphor and data
+                transformations, in order to create more human presentations of data.
+                It also shows how we can learn from print advertising, engineering,
+                museum curation, and mythology archetypes. This human-centered approach
+                works with machines to design information for people. Advance your
+                understanding beyond by learning from a broad tradition of putting
+                things "in formation" to create new and wonderful ways of opening
+                our eyes to the world.
+            </p>
+            <p>
+                <i>Info We Trust</i> takes a thoroughly original point of attack
+                on the art of informing. It builds on decades of best practices
+                and adds the creative enthusiasm of a world-class data storyteller.
+                <i>Info We Trust</i> is lavishly illustrated with hundreds of
+                original compositions designed to illuminate the craft, delight
+                the reader, and inspire a generation of data storytellers.
+            </p>
+        </div>
+    },
+    {
         title: "The Outsider",
         author: "Stephen King",
         finished: "",
