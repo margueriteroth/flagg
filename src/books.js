@@ -35,6 +35,52 @@ const books = [
     //     </div>
     // },
     {
+        title: "Org Design for Design Orgs",
+        author: "Peter Merholz,  Kristin Skinner",
+        finished: "",
+        inProgress: true,
+        "tags": [
+            "non-fiction",
+            "tech",
+        ],
+        isFiction: false,
+        genre: "design",
+        goodreadsUrl: "https://www.goodreads.com/book/show/27968897-org-design-for-design-orgs",
+        coverImg: "https://images.gr-assets.com/books/1466989854l/27968897.jpg",
+        summary:
+        <div>
+            <p>
+                Design has become the key link between users and today's complex and rapidly evolving digital experiences, and designers are starting to be included in strategic conversations about the products and services that enterprises ultimately deliver. This has led to companies building in-house digital/experience design teams at unprecedented rates, but many of them don't understand how to get the most out of their investment. This practical guide provides guidelines for creating and leading design teams within your organization, and explores ways to use design as part of broader strategic planning.
+            </p>
+            <p>
+                What you'll discover:
+                <ul>
+                    <li>
+                        Why design's role has evolved in the digital age
+                    </li>
+                    <li>
+                        How to infuse design into every product and service experience
+                    </li>
+                    <li>
+                        The 12 qualities of effective design organizations
+                    </li>
+                    <li>
+                        How to structure your design team through a Centralized Partnership
+                    </li>
+                    <li>
+                        Design team roles and evolution
+                    </li>
+                    <li>
+                        The process of recruiting and hiring designers
+                    </li>
+                    <li>
+                        How to manage your design team and promote professional growth
+                    </li>
+                </ul>
+            </p>
+        </div>
+    },
+    {
         title: "Info We Trust: How to Inspire the World with Data",
         author: "RJ Andrews",
         finished: "",
@@ -201,47 +247,47 @@ const books = [
             </p>
         </div>
     },
-    {
-        title: "The Chickenshit Club: Why the Justice Department Fails to Prosecute Executives",
-        author: "Jesse Eisinger",
-        inProgress: true,
-        audiobook: true,
-        "tags": [
-            "non-fiction",
-            "true crime",
-        ],
-        genre: "true crime",
-        isFiction: false,
-        goodreadsUrl: "https://www.goodreads.com/book/show/34397551-the-chickenshit-club",
-        coverImg: "https://images.gr-assets.com/books/1499862781l/34397551.jpg",
-        summary: <div>
-            <p>
-                From Pulitzer Prize–winning journalist Jesse Eisinger, “a fast moving, fly-on-the-wall,
-                disheartening look at the deterioration of the Justice Department and the Securities and
-                Exchange Commission…It is a book of superheroes” (San Franscisco Review of Books).
-            </p>
-            <p>
-                Why were no bankers put in prison after the financial crisis of 2008? Why do CEOs seem
-                to commit wrongdoing with impunity? The problem goes beyond banks deemed “Too Big to
-                Fail” to almost every large corporation in America—to pharmaceutical companies and auto
-                manufacturers and beyond. <i>The Chickenshit Club</i>—an inside reference to prosecutors too
-                scared of failure and too daunted by legal impediments to do their jobs—explains why
-                in “an absorbing financial history, a monumental work of journalism… a first-rate study
-                of the federal bureaucracy” (<i>Bloomberg Businessweek</i>).
-            </p>
-            <p>
-                Jesse Eisigner begins the story in the 1970s, when the government pioneered the notion
-                that top corporate executives, not just seedy crooks, could commit heinous crimes and
-                go to prison. He brings us to trading desks on Wall Street, to corporate boardrooms and
-                the offices of prosecutors and FBI agents. These revealing looks provide context for the
-                evolution of the Justice Department’s approach to pursuing corporate criminals through
-                the early 2000s and into the Justice Department’s approach to pursuing corporate criminals
-                through the early 2000s and into the Justice Department of today, including the
-                prosecutorial fiascos, corporate lobbying, trial losses, and culture shifts that have
-                stripped the government of the will and ability to prosecute top corporate executives.
-            </p>
-        </div>
-    },
+    // {
+    //     title: "The Chickenshit Club: Why the Justice Department Fails to Prosecute Executives",
+    //     author: "Jesse Eisinger",
+    //     inProgress: true,
+    //     audiobook: true,
+    //     "tags": [
+    //         "non-fiction",
+    //         "true crime",
+    //     ],
+    //     genre: "true crime",
+    //     isFiction: false,
+    //     goodreadsUrl: "https://www.goodreads.com/book/show/34397551-the-chickenshit-club",
+    //     coverImg: "https://images.gr-assets.com/books/1499862781l/34397551.jpg",
+    //     summary: <div>
+    //         <p>
+    //             From Pulitzer Prize–winning journalist Jesse Eisinger, “a fast moving, fly-on-the-wall,
+    //             disheartening look at the deterioration of the Justice Department and the Securities and
+    //             Exchange Commission…It is a book of superheroes” (San Franscisco Review of Books).
+    //         </p>
+    //         <p>
+    //             Why were no bankers put in prison after the financial crisis of 2008? Why do CEOs seem
+    //             to commit wrongdoing with impunity? The problem goes beyond banks deemed “Too Big to
+    //             Fail” to almost every large corporation in America—to pharmaceutical companies and auto
+    //             manufacturers and beyond. <i>The Chickenshit Club</i>—an inside reference to prosecutors too
+    //             scared of failure and too daunted by legal impediments to do their jobs—explains why
+    //             in “an absorbing financial history, a monumental work of journalism… a first-rate study
+    //             of the federal bureaucracy” (<i>Bloomberg Businessweek</i>).
+    //         </p>
+    //         <p>
+    //             Jesse Eisigner begins the story in the 1970s, when the government pioneered the notion
+    //             that top corporate executives, not just seedy crooks, could commit heinous crimes and
+    //             go to prison. He brings us to trading desks on Wall Street, to corporate boardrooms and
+    //             the offices of prosecutors and FBI agents. These revealing looks provide context for the
+    //             evolution of the Justice Department’s approach to pursuing corporate criminals through
+    //             the early 2000s and into the Justice Department’s approach to pursuing corporate criminals
+    //             through the early 2000s and into the Justice Department of today, including the
+    //             prosecutorial fiascos, corporate lobbying, trial losses, and culture shifts that have
+    //             stripped the government of the will and ability to prosecute top corporate executives.
+    //         </p>
+    //     </div>
+    // },
     {
         title: "The Indifferent Stars Above: The Harrowing Saga of a Donner Party Bride",
         author: "Daniel James Brown",
