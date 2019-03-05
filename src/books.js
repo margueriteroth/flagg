@@ -38,7 +38,7 @@ const books = [
         title: "Org Design for Design Orgs",
         author: "Peter Merholz,  Kristin Skinner",
         finished: "",
-        inProgress: true,
+        inProgress: false,
         "tags": [
             "non-fiction",
             "tech",
