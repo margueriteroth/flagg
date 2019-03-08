@@ -127,6 +127,10 @@ a {
     }
 }
 
+.BookshelfContainer {
+    margin-bottom: 15em;
+}
+
 @media(max-width: $media-mobile) {
     h1 {
         font-size: 1.75em;

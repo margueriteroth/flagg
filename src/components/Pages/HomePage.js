@@ -48,8 +48,8 @@ class HomePage extends Component {
                             key={key}
                         />
                     )}
-                    <ProjectNumbers />
                     <BookshelfContainer />
+                    <ProjectNumbers />
                 </div>
             </div>
         );
