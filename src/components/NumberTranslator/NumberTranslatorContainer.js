@@ -74,7 +74,7 @@ class NumberTranslatorContainer extends Component {
 
     clearInput = () => {
         this.setState({
-            value: null,
+            value: "",
             periodOnes: emptyPeriod,
             periodThousands: emptyPeriod,
             periodMillions: emptyPeriod,
@@ -428,6 +428,7 @@ class NumberTranslatorContainer extends Component {
                     arrMillions={arrMillions}
                     arrBillions={arrBillions}
                     themes={themes}
+                    value={value}
                 />
             </div>
         );

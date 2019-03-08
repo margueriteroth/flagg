@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import _ from "lodash";
 
 class NumberTextChunk extends Component {
 
@@ -11,7 +12,7 @@ class NumberTextChunk extends Component {
     };
 
     render() {
-        const { period, theme } = this.props;
+        const { period, theme, value, periodOnes } = this.props;
         return (
             <h2 className={classNames("NumberTextChunk", `NumberTextChunk--${period.name}`)}>
                 {period.hundreds.text && (
@@ -40,10 +41,19 @@ class NumberTextChunk extends Component {
                 )}
                 {period.ones.text && (
                     <React.Fragment>
-                        <span className="NumberTextChunk__unit NumberTextChunk__unit--single" style={{ color: theme.one }}>
-                            {period.ones.text}
-                        </span>
-
+                        {(period.name !== "periodOnes" && period.ones.digit === "1") ? (
+                            <React.Fragment>
+                                {(period.name === "periodMillions" ) && (
+                                    <span className="NumberTextChunk__unit NumberTextChunk__unit--single" style={{ color: theme.one }}>
+                                        un
+                                    </span>
+                                )}
+                            </React.Fragment>
+                        ) : (
+                            <span className="NumberTextChunk__unit NumberTextChunk__unit--single" style={{ color: theme.one }}>
+                                {period.ones.text}
+                            </span>
+                        ) }
                     </React.Fragment>
                 )}
                 {period.name !== 'periodOnes' && (
@@ -53,12 +63,20 @@ class NumberTextChunk extends Component {
                 )}
                 {period.name === 'periodThousands' && (
                     <React.Fragment>
-                        <span className="NumberTextChunk__period__name" style={{ color: theme.one }}>
-                            mil
-                        </span>
-                        <span className="NumberTextChunk__punctuation">
-                            ,
-                        </span>
+                        {!(period.ones.digit === "0" && period.tens.digit === "0" && period.hundreds.digit === "0") && (
+                            <React.Fragment>
+                                {(period.ones.digit === "1" && period.tens.digit === "0") ? (
+                                    <span className="NumberTextChunk__period__name" style={{ color: theme.one }}>
+                                        un mil
+                                        {/* move 'un' to text */}
+                                    </span>
+                                ) : (
+                                    <span className="NumberTextChunk__period__name" style={{ color: theme.one }}>
+                                        mil
+                                    </span>
+                                )}
+                            </React.Fragment>
+                        )}
                         <span className="NumberTextChunk__punctuation">
                             &nbsp;
                         </span>
@@ -66,12 +84,15 @@ class NumberTextChunk extends Component {
                 )}
                 {period.name === 'periodMillions' && (
                     <React.Fragment>
-                        <span className="NumberTextChunk__period__name" style={{ color: theme.one }}>
-                            millones
-                        </span>
-                        <span className="NumberTextChunk__punctuation">
-                            ,
-                        </span>
+                        {period.ones.digit === '1' ? (
+                            <span className="NumberTextChunk__period__name" style={{ color: theme.one }}>
+                                millón
+                            </span>
+                        ) : (
+                            <span className="NumberTextChunk__period__name" style={{ color: theme.one }}>
+                                millones
+                            </span>
+                        )}
                         <span className="NumberTextChunk__punctuation">
                             &nbsp;
                         </span>
@@ -81,9 +102,6 @@ class NumberTextChunk extends Component {
                     <React.Fragment>
                         <span className="NumberTextChunk__period__name" style={{ color: theme.one }}>
                             mil
-                        </span>
-                        <span className="NumberTextChunk__punctuation">
-                            ,
                         </span>
                         <span className="NumberTextChunk__punctuation">
                             &nbsp;

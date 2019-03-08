@@ -52,8 +52,10 @@ const books = [
             <p>
                 Design has become the key link between users and today's complex and rapidly evolving digital experiences, and designers are starting to be included in strategic conversations about the products and services that enterprises ultimately deliver. This has led to companies building in-house digital/experience design teams at unprecedented rates, but many of them don't understand how to get the most out of their investment. This practical guide provides guidelines for creating and leading design teams within your organization, and explores ways to use design as part of broader strategic planning.
             </p>
-            <p>
-                What you'll discover:
+            <div>
+                <p>
+                    What you'll discover:
+                </p>
                 <ul>
                     <li>
                         Why design's role has evolved in the digital age
@@ -77,7 +79,7 @@ const books = [
                         How to manage your design team and promote professional growth
                     </li>
                 </ul>
-            </p>
+            </div>
         </div>
     },
     {

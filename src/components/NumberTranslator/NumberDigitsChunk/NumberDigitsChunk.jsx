@@ -40,9 +40,6 @@ class NumberDigitsChunk extends Component {
                         <span className="NumberTextChunk__punctuation">
                             ,
                         </span>
-                        <span className="NumberTextChunk__punctuation">
-                            &nbsp;
-                        </span>
                     </React.Fragment>
                 )}
             </h2>

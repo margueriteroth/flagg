@@ -24,7 +24,7 @@ class NumberTranslatorResult extends Component {
     };
 
     render() {
-        const { isJoined, periodOnes, periodThousands, periodMillions, periodBillions, arrOnes, arrThousands, arrMillions, arrBillions, themes } = this.props;
+        const { value, isJoined, periodOnes, periodThousands, periodMillions, periodBillions, arrOnes, arrThousands, arrMillions, arrBillions, themes } = this.props;
         return (
             <div className={classNames("NumberTranslator NumberTranslatorResult", {
                 'NumberTranslatorResult--isJoined': isJoined
@@ -102,6 +102,7 @@ class NumberTranslatorResult extends Component {
                                 period={periodThousands}
                                 arr={arrThousands}
                                 theme={themes.thousands}
+                                periodOnes={periodOnes}
                             />
                         )}
 
