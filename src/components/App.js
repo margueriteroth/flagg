@@ -11,6 +11,15 @@ class App extends Component {
     state = {
         projectSectionOffset: 640,
         navProjectsIsActive: false,
+        navsAreHidden: false,
+    }
+
+    hideNavs = () => {
+        this.setState({ navsAreHidden: true });
+    }
+
+    showNavs = () => {
+        this.setState({ navsAreHidden: false });
     }
 
     setProjectSectionOffset = (offset) => {
@@ -40,7 +49,7 @@ class App extends Component {
     }
 
     render() {
-        const { navProjectsIsActive, projectSectionOffset } = this.state;
+        const { navProjectsIsActive, projectSectionOffset, navsAreHidden } = this.state;
         return (
             <div className="App">
                 <MetaTags>
@@ -50,23 +59,31 @@ class App extends Component {
                     <meta property="og:title" content="Marguerite Roth | Product Designer and Developer" />
                     <meta property="og:image" content="path/marguerite-roth.jpg" />
                 </MetaTags>
-                <Route render={(routerProps) =>
-                    <Navigation
-                        handleScrollToElement={this.handleScrollToElement}
-                        navProjectsIsActive={navProjectsIsActive}
-                        routerProps={routerProps}
-                        currentPage={routerProps.location.pathname}
-                        projectSectionOffset={projectSectionOffset}
-                    />
-                } />
+                {!navsAreHidden && (
+                    <Route render={(routerProps) =>
+                        <Navigation
+                            handleScrollToElement={this.handleScrollToElement}
+                            navProjectsIsActive={navProjectsIsActive}
+                            routerProps={routerProps}
+                            currentPage={routerProps.location.pathname}
+                            projectSectionOffset={projectSectionOffset}
+                        />
+                    } />
+                )}
+
                 <Route render={(routerProps) =>
                     <MainContainer
                         routerProps={routerProps}
                         ref={this.myRef}
                         setProjectSectionOffset={this.setProjectSectionOffset}
+                        navsAreHidden={navsAreHidden}
+                        hideNavs={this.hideNavs}
+                        showNavs={this.showNavs}
                     />
                 } />
-                <Footer />
+                {!navsAreHidden && (
+                    <Footer />
+                )}
             </div>
         );
     }

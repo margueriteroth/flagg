@@ -1,0 +1,37 @@
+@import "../../styles/lib.scss";
+
+.Map {
+    height: 100%;
+    transform: scale(1.25);
+
+    &Container {
+        height: 100%;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__spinner {
+        margin-bottom: 4em;
+        animation: spin 40s linear infinite;
+    }
+
+    &__marker {
+        opacity: 0.5;
+        mix-blend-mode: multiply;
+
+        &--user {
+            mix-blend-mode: normal;
+            opacity: 1;
+        }
+
+        &--you {
+            position: absolute;
+            z-index: 10;
+            //top: 387px;
+            //left: 956px;
+        }
+    }
+}
