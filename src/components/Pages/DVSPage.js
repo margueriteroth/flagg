@@ -70,7 +70,7 @@ class DVSPage extends Component {
         const { showData, showViz, showSociety, showMe } = this.state;
         return (
             <div className="DVSPage SinglePage">
-                <div className="DVSContainer" ref={this.foo}>
+                <div className="DVSContainer">
                     <div className="DVS__section DVS__section--info">
                         <div className="DVS__credential">
                             <div className="DVS__icon">
@@ -87,7 +87,8 @@ class DVSPage extends Component {
                             Data Visualization Society
                         </h1>
                         <p>
-                            This map shows the location of membership signups between February 20, 2019 — March 9, 2019.
+                            This map shows the locations of membership signups
+                            between February 20, 2019 thru March 9, 2019.
                         </p>
                         <div className="DVS__InfoKey">
                             <p>

@@ -2,15 +2,30 @@
 
 .Map {
     height: 100%;
-    transform: scale(1.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: scale(1.2);
+
+    // .countries {
+    //     svg {
+    //         transition: all 150ms linear;
+    //     }
+    // }
 
     &Container {
         height: 100%;
-        min-width: 100%;
+        //min-width: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        //argin-right: 5em;
+        //margin-top: 3em;
+        //border: 1px solid red;
+        overflow: hidden;
     }
 
     &__spinner {
@@ -22,6 +37,10 @@
         opacity: 0.5;
         mix-blend-mode: multiply;
 
+        &--hide {
+            opacity: 0;
+        }
+
         &--user {
             mix-blend-mode: normal;
             opacity: 1;
@@ -30,6 +49,7 @@
         &--you {
             position: absolute;
             z-index: 10;
+            //transform: scale(1.2);
             //top: 387px;
             //left: 956px;
         }

@@ -5,6 +5,9 @@ import Map from "components/Map/Map";
 import { geolocated } from 'react-geolocated';
 import { geoMercator, geoPath } from "d3-geo";
 import classNames from 'classnames';
+import _ from "lodash";
+import { fastest } from 'sw-toolbox';
+
 
 class MapContainer extends Component {
     constructor(props) {
@@ -15,36 +18,51 @@ class MapContainer extends Component {
             userTop: null,
             userLeft: null
         }
+        this.chartContainer = React.createRef();
         this.fitParentContainer = this.fitParentContainer.bind(this);
     }
 
     setUserOffsets = (top, left) => {
         // center of image
-        top = top - 16;
-        left = left - 16;
+        top = top - 12;
+        left = left - 10;
         this.setState({userTop: top, userLeft: left});
     }
 
+    setInitialFit() {
+        setTimeout(function () {
+            this.fitParentContainer()
+        }.bind(this), 10);
+    }
 
     componentDidMount() {
-        window.addEventListener('resize', this.fitParentContainer);
-        this.fitParentContainer();
+        this.setInitialFit();
+        window.addEventListener('resize',
+            _.debounce(this.fitParentContainer, 1000)
+        );
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.fitParentContainer);
+        window.removeEventListener('resize',
+            _.debounce(this.fitParentContainer, 1000)
+        );
     }
 
     fitParentContainer() {
-        const { containerWidth } = this.state;
-        const currentContainerWidth = this.chartContainer
+        console.log('fit');
+        const { containerHeight, containerWidth } = this.state;
+        const currentContainerWidth = this.chartContainer.current
             .getBoundingClientRect().width;
 
-        const shouldResize = (containerWidth !== currentContainerWidth);
+        const currentContainerHeight = this.chartContainer.current
+            .getBoundingClientRect().height;
+
+        const shouldResize = (containerWidth !== currentContainerWidth) || (containerHeight !== currentContainerHeight);
 
         if (shouldResize) {
             this.setState({
-                containerWidth: currentContainerWidth - 50,
+                containerWidth: currentContainerWidth,
+                containerHeight: currentContainerHeight,
             })
         }
     }
@@ -56,10 +74,14 @@ class MapContainer extends Component {
     }
 
     render() {
-        const { containerWidth, isLoaded, userTop, userLeft } = this.state;
+        const { containerHeight, containerWidth, isLoaded, userTop, userLeft } = this.state;
         const { showData, showViz, showSociety, showMe } = this.props;
         return (
-            <div className="MapContainer" ref={(el) => { this.chartContainer = el }}>
+            <div
+                className="MapContainer"
+                ref={this.chartContainer}
+
+            >
                 {!this.props.isGeolocationAvailable ? (
                     <Label>
                         Your browser does not support Geolocation
@@ -70,6 +92,20 @@ class MapContainer extends Component {
                         </Label>
                 ) : this.props.coords ? (
                     <React.Fragment>
+                        {/* <p>
+                            width:{this.state.containerWidth}
+                        </p>
+                        <p>
+                            height: {this.state.containerHeight}
+                        </p> */}
+                        {/* <p>
+                            isResizing:
+                            {isResizing ? (
+                                <span>true</span>
+                            ) : (
+                                <span>false</span>
+                            )}
+                        </p> */}
                         {(showMe && isLoaded) && (
                             <div
                                 className="Map__marker--you"
@@ -84,6 +120,7 @@ class MapContainer extends Component {
                         )}
                         <Map
                             containerWidth={containerWidth}
+                            containerHeight={containerHeight}
                             dsvData={this.props.dsvData}
                             setLoading={this.setLoading}
                             userCoords={this.props.coords}

@@ -71,18 +71,18 @@ body {
         margin-top: 80px;
     }
 
-     &--wide {
-         margin: 0;
-         padding: 0;
-         max-width: 100%;
-         width: 100%;
-         padding: 1.75em;
-         position: relative;
+    &--wide {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 1.75em;
+        position: relative;
 
-         h1 {
-             max-width: 100%;
-         }
-     }
+        h1 {
+            max-width: 100%;
+        }
+    }
 }
 
 h1 {
@@ -283,7 +283,7 @@ a {
         &--info {
             flex: 1 1 390px;
             margin-right: 12px;
-            //border: 3px solid red;
+            //border: 1px solid purple;
         }
 
         &--map {
@@ -292,6 +292,7 @@ a {
             margin: 0;
             padding: 0;
             flex: 1 0 70%;
+            //border: 1px solid yellow;
 
             @media(max-width: 1000px) {
                 height: auto;

@@ -70,6 +70,12 @@ class Map extends Component {
             })
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if ((prevProps.containerWidth !== null) && (prevProps.containerWidth !== this.props.containerWidth)) {
+            this.setUser();
+        }
+    }
+
     determineStrengthHex(skill) {
         if (skill === "data") {
             return "#29B6A8";
@@ -81,12 +87,12 @@ class Map extends Component {
     }
 
     render() {
-        const { containerWidth, showData, showViz, showSociety, isLoaded } = this.props;
+        const { containerWidth, containerHeight, showData, showViz, showSociety, isLoaded } = this.props;
         return (
             <div className="Map">
                 <React.Fragment>
                     {/* <svg width="1050" height="600" viewBox="0 0 900 400"> */}
-                    <svg width={containerWidth} height="670" viewBox="0 0 900 400">
+                    <svg width={containerWidth} viewBox="0 0 900 400">
                         <g className="countries">
                             {
                                 this.state.worldData.map((d, i) => (
@@ -105,35 +111,35 @@ class Map extends Component {
                         <g className="markers">
                             {
                                 this.state.data.map((member, i) => (
-                                    ((member.skill === "data" && showData) ? (
+                                    ((member.skill === "data") ? (
                                         <circle
                                             key={`marker-${i}`}
                                             cx={this.projection()([member.long, member.lat])[0]}
                                             cy={this.projection()([member.long, member.lat])[1]}
-                                            r={3}
+                                            r={2.4}
                                             fill={this.determineStrengthHex(member.skill)}
-                                            stroke={this.determineStrengthHex(member.skill)}
                                             className="Map__marker"
+                                            fillOpacity={showData ? 1 : 0}
                                         />
-                                    ) : (member.skill === "visualization" && showViz) ? (
+                                    ) : (member.skill === "visualization") ? (
                                             <circle
                                                 key={`marker-${i}`}
                                                 cx={this.projection()([member.long, member.lat])[0]}
                                                 cy={this.projection()([member.long, member.lat])[1]}
-                                                r={3}
+                                                r={2.4}
                                                 fill={this.determineStrengthHex(member.skill)}
-                                                stroke={this.determineStrengthHex(member.skill)}
                                                 className="Map__marker"
+                                                fillOpacity={showViz ? 1 : 0}
                                             />
-                                    ) : (member.skill === "society" && showSociety) && (
+                                    ) : (member.skill === "society") && (
                                             <circle
                                                 key={`marker-${i}`}
                                                 cx={this.projection()([member.long, member.lat])[0]}
                                                 cy={this.projection()([member.long, member.lat])[1]}
-                                                r={3}
+                                                r={2.4}
                                                 fill={this.determineStrengthHex(member.skill)}
-                                                stroke={this.determineStrengthHex(member.skill)}
                                                 className="Map__marker"
+                                                fillOpacity={showSociety ? 1 : 0}
                                             />
                                     ))
                                 ))
@@ -148,6 +154,7 @@ class Map extends Component {
                                     cy={this.projection()([this.props.userCoords.longitude, this.props.userCoords.latitude])[1]}
                                     r={3}
                                     fill="#FFCF5C"
+                                    fillOpacity={0}
                                     className="Map__marker Map__marker--user"
                                 />
                             </g>

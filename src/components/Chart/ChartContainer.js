@@ -20,17 +20,21 @@ export default ChartComponent => (
         }
 
         fitParentContainer() {
-            const { containerWidth } = this.state;
+
+            const { containerWidth, containerHeihgt } = this.state;
             const currentContainerWidth = this.chartContainer
                 .getBoundingClientRect().width;
 
-            const shouldResize = (containerWidth !== currentContainerWidth);
+            const currentContainerHeight = this.chartContainer
+                .getBoundingClientRect().height;
 
-            if (shouldResize) {
-                    this.setState({
-                    containerWidth: currentContainerWidth,
-                })
-            }
+            //const shouldResize = (containerWidth !== currentContainerWidth);
+
+            this.setState({
+                containerWidth: currentContainerWidth,
+                containerHeight: currentContainerHeight
+            })
+
         }
 
         renderChart() {
