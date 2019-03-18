@@ -34,7 +34,8 @@ class DVSPage extends Component {
             showData: true,
             showViz: true,
             showSociety: true,
-            showMe: true
+            showMe: true,
+            showMap: true,
         }
     }
 
@@ -50,6 +51,10 @@ class DVSPage extends Component {
         } else if (name === "society"){
             this.setState(prevState => ({
                 showSociety: !prevState.showSociety
+            }));
+        } else if (name === "map") {
+            this.setState(prevState => ({
+                showMap: !prevState.showMap
             }));
         } else {
             this.setState(prevState => ({
@@ -67,7 +72,7 @@ class DVSPage extends Component {
     }
 
     render() {
-        const { showData, showViz, showSociety, showMe } = this.state;
+        const { showData, showViz, showSociety, showMe, showMap } = this.state;
         return (
             <div className="DVSPage SinglePage">
                 <div className="DVSContainer">
@@ -87,14 +92,14 @@ class DVSPage extends Component {
                             Data Visualization Society
                         </h1>
                         <p>
-                            This map shows the locations of membership signups
-                            between February 20, 2019 thru March 9, 2019.
+                            This map shows the locations of <strong>DVS</strong> membership
+                            signups
+                            between February 20, 2019 and March 9, 2019.
                         </p>
                         <div className="DVS__InfoKey">
                             <p>
-                                Each member was asked to rank their davaviz skills in <strong>Data</strong>,
-                                <strong>Visualization</strong>, and <strong>Society</strong>.
-                                Each member's color represents their highest ranked skill.
+                                Each member was asked to rank their skills in the following categories: <strong>data</strong>, <strong>visualization</strong>, and <strong>society</strong>.
+                                The node color represents the member's highest ranked skill.
                             </p>
                             <div className="DVS__key__container">
                                 {colors.map((color, key) => (
@@ -110,6 +115,17 @@ class DVSPage extends Component {
                                         </Label>
                                     </div>
                                 ))}
+
+                                <div
+                                    className={classNames("DVS__key", {
+                                        'DVS__key--inactive': !showMap
+                                    })}
+                                    onClick={() => this.toggleData("map")}>
+                                    <span className="DVS__key__color DVS__key__color--map"></span>
+                                    <Label className="DVS__key__label">
+                                        Map
+                                    </Label>
+                                </div>
                                 <div
                                     className={classNames("DVS__key", {
                                         'DVS__key--inactive': !showMe
@@ -117,7 +133,7 @@ class DVSPage extends Component {
                                     onClick={() => this.toggleData("me")}>
                                     <Spinner className="DVS__key__spooch" />
                                     <Label className="DVS__key__label">
-                                        You
+                                        You are here
                                     </Label>
                                 </div>
                             </div>
@@ -129,6 +145,7 @@ class DVSPage extends Component {
                             setUserOffsets={this.setUserOffsets}
                             dsvData={data}
                             setLoading={this.setLoading}
+                            showMap={showMap}
                             showMe={showMe}
                             showData={showData}
                             showViz={showViz}

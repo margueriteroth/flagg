@@ -75,7 +75,7 @@ class MapContainer extends Component {
 
     render() {
         const { containerHeight, containerWidth, isLoaded, userTop, userLeft } = this.state;
-        const { showData, showViz, showSociety, showMe } = this.props;
+        const { showData, showViz, showSociety, showMe, showMap } = this.props;
         return (
             <div
                 className="MapContainer"
@@ -127,6 +127,7 @@ class MapContainer extends Component {
                             setUserOffsets={this.setUserOffsets}
                             isLoaded={isLoaded}
                             setLoading={this.setLoading}
+                            showMap={showMap}
                             showData={showData}
                             showViz={showViz}
                             showSociety={showSociety}

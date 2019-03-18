@@ -261,6 +261,17 @@ a {
             &:last-of-type {
                 margin-left: -14px;
             }
+
+            &--map {
+                background: #efeafd5e;
+                border: 1px solid darken(#eff2fc, 5%);
+
+
+                &:last-of-type {
+                    margin-left: 0;
+                }
+            }
+
         }
 
         &__spooch {

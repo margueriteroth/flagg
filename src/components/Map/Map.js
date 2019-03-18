@@ -87,7 +87,7 @@ class Map extends Component {
     }
 
     render() {
-        const { containerWidth, containerHeight, showData, showViz, showSociety, isLoaded } = this.props;
+        const { containerWidth, showMap, showData, showViz, showSociety, isLoaded } = this.props;
         return (
             <div className="Map">
                 <React.Fragment>
@@ -101,9 +101,11 @@ class Map extends Component {
                                         d={geoPath().projection(this.projection())(d)}
                                         className="country"
                                         fill='#F7F5F9'
-                                        opacity='0.95'
+
                                         stroke="#FFFFFF"
                                         strokeWidth={1}
+                                        fillOpacity={showMap ? 1 : 0}
+                                        strokeOpacity={showMap ? 1 : 0}
                                     />
                                 ))
                             }
