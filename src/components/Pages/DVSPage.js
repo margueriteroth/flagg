@@ -104,6 +104,7 @@ class DVSPage extends Component {
                                         })}
                                          onClick={() => this.toggleData(color.name)}>
                                         <span className="DVS__key__color" style={{ background: color.color }}></span>
+                                        <span className="DVS__key__color" style={{ background: color.color }}></span>
                                         <Label className="DVS__key__label">
                                             {color.name}
                                         </Label>

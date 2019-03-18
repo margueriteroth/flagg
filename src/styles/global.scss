@@ -256,6 +256,11 @@ a {
             border-radius: 10px;
             display: inline-block;
             margin-right: 0.6em;
+            mix-blend-mode: multiply;
+
+            &:last-of-type {
+                margin-left: -14px;
+            }
         }
 
         &__spooch {
