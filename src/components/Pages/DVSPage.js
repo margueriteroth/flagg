@@ -114,13 +114,13 @@ class DVSPage extends Component {
                                target="_blank"
                                href="https://www.datavisualizationsociety.com/">
                                DVS
-                            </a> membership signups
+                            </a> membership sign-ups
                             between February 20, 2019 and March 9, 2019.
                         </p>
                         <div className="DVS__InfoKey">
                             <p>
                                 Each member was asked to rank their skills in the following categories: <strong>data</strong>, <strong>visualization</strong>, and <strong>society</strong>.
-                                The node color represents the member's highest ranked skill.
+                                The color represents the member's highest ranked skill.
                             </p>
                             <div className="DVS__key__container">
                                 {colors.map((color, key) => (
