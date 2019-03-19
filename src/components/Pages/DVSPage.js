@@ -114,7 +114,7 @@ class DVSPage extends Component {
                                target="_blank"
                                href="https://www.datavisualizationsociety.com/">
                                DVS
-                            </a> membership sign-ups
+                            </a> sign-ups
                             between February 20, 2019 and March 9, 2019.
                         </p>
                         <div className="DVS__InfoKey">
