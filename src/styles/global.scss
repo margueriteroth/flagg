@@ -194,6 +194,10 @@ a {
         h1 {
             line-height: 1.1;
             margin-top: 0.3em;
+
+            @media(max-width: 1200px) {
+                font-size: 2.5em;
+            }
         }
     }
 
@@ -241,7 +245,6 @@ a {
             display: inline-flex;
             align-items: center;
             flex-wrap: wrap;
-            //flex-direction: column;
         }
 
         &__label {
@@ -299,7 +302,13 @@ a {
         &--info {
             flex: 1 1 390px;
             margin-right: 12px;
-            //border: 1px solid purple;
+
+            @media(max-width: 1000px) {
+                height: auto;
+                display: block;
+                flex: unset;
+                margin: 0;
+            }
         }
 
         &--map {
@@ -308,11 +317,11 @@ a {
             margin: 0;
             padding: 0;
             flex: 1 0 70%;
-            //border: 1px solid yellow;
 
             @media(max-width: 1000px) {
                 height: auto;
                 display: block;
+                flex: 1;
             }
         }
     }

@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-import Avatar from "../_ui/Avatar/Avatar";
-import Button from "components/_ui/Button/Button";
-import Spinner from "components/_ui/Spinner/Spinner";
-import ReactGA from 'react-ga';
-import classNames from 'classnames';
 import { geoMercator, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 import _ from "lodash";
 import './Map.css';
-
 class Map extends Component {
     constructor() {
         super()

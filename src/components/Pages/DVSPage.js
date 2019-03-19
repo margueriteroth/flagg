@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import Button from "components/_ui/Button/Button";
 import DvsIcon from 'components/_ui/DvsIcon/DvsIcon';
-import Map from "components/Map/Map";
 import MapContainer from "components/Map/MapContainer";
 import Spinner from "components/_ui/Spinner/Spinner";
 import Label from "components/_ui/Label/Label";
-import Timeline from "components/Timeline/Timeline";
 import data from "dvs_challenge_1_membership_time_space.csv";
 
 const colors = [
@@ -133,7 +130,7 @@ class DVSPage extends Component {
                                     onClick={() => this.toggleData("me")}>
                                     <Spinner className="DVS__key__spooch" />
                                     <Label className="DVS__key__label">
-                                        You are here
+                                        You
                                     </Label>
                                 </div>
                             </div>
@@ -151,9 +148,6 @@ class DVSPage extends Component {
                             showViz={showViz}
                             showSociety={showSociety}
                         />
-
-                        {/* <Timeline dsvData={data} /> */}
-
                     </div>
                 </div>
 

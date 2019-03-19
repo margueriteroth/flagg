@@ -3,12 +3,7 @@ import Spinner from "components/_ui/Spinner/Spinner";
 import Label from "components/_ui/Label/Label";
 import Map from "components/Map/Map";
 import { geolocated } from 'react-geolocated';
-import { geoMercator, geoPath } from "d3-geo";
-import classNames from 'classnames';
 import _ from "lodash";
-import { fastest } from 'sw-toolbox';
-
-
 class MapContainer extends Component {
     constructor(props) {
         super(props)
@@ -49,7 +44,6 @@ class MapContainer extends Component {
     }
 
     fitParentContainer() {
-        console.log('fit');
         const { containerHeight, containerWidth } = this.state;
         const currentContainerWidth = this.chartContainer.current
             .getBoundingClientRect().width;
@@ -134,7 +128,13 @@ class MapContainer extends Component {
                         />
                     </React.Fragment>
                 ) : (
-                    <Spinner size="xl" spin className="Map__spinner" />
+                    <React.Fragment>
+                        <Spinner size="xl" spin className="Map__spinner" />
+                        <Label>
+                            Loading
+                        </Label>
+                    </React.Fragment>
+
                 )}
             </div>
         )
