@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import MetaTags from 'react-meta-tags';
-import ReactGA from 'react-ga';
 import Footer from "./Footer/Footer";
 import MainContainer from "./Containers/MainContainer";
 import Navigation from "components/Navigation/Navigation";
@@ -30,22 +29,6 @@ class App extends Component {
         const offset = this.state.projectSectionOffset - 120;
         window.scrollTo(0, offset);
         this.trackEvent('Navigation | Clicked Projects');
-    }
-
-    initializeReactGA() {
-        ReactGA.initialize('UA-130275221-1');
-        ReactGA.pageview('/homepage');
-    }
-
-    trackEvent = (action) => {
-        ReactGA.event({
-            category: 'User',
-            action: action
-        });
-    }
-
-    componentDidMount() {
-        this.initializeReactGA();
     }
 
     render() {

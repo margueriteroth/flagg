@@ -70,21 +70,22 @@ class DVSPage extends Component {
         this.setState({ userTopOffset: top, userLeftOffset: left});
     }
 
-    initializeReactGA() {
-        ReactGA.initialize('UA-130275221-1');
-        ReactGA.pageview('/dvs/');
-    }
-
     trackEvent = (action) => {
         ReactGA.event({
             category: 'User',
-            action: action,
+            action: action
         });
+    }
+
+    initializeReactGA() {
+        ReactGA.initialize('UA-130275221-1');
+        ReactGA.pageview('/dvs');
     }
 
     componentDidMount() {
         this.props.hideNavs();
         this.initializeReactGA();
+        console.log('initialize dvs');
     }
 
     render() {

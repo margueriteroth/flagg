@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import BookshelfContainer from "components/Bookshelf/BookshelfContainer";
 import Intro from "components/Intro/Intro";
 import Project from "components/Project/Project";
@@ -21,9 +22,23 @@ class HomePage extends Component {
         window.scrollTo(0, 0);
     }
 
+    trackEvent = (action) => {
+        ReactGA.event({
+            category: 'User',
+            action: action
+        });
+    }
+
+    initializeReactGA() {
+        ReactGA.initialize('UA-130275221-1');
+        ReactGA.pageview('/homepage');
+    }
+
     componentDidMount() {
         const offset = this.projectSectionRef.current.offsetTop;
         this.props.setProjectSectionOffset(offset);
+        this.initializeReactGA();
+        console.log('initialize hom');
     }
 
     render() {
