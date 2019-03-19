@@ -89,7 +89,7 @@ class DVSPage extends Component {
                             Data Visualization Society
                         </h1>
                         <p>
-                            This map shows the locations of <strong>DVS</strong> membership
+                            This map shows the locations of <a rel="noopener noreferrer" target="_blank" href="https://www.datavisualizationsociety.com/" >DVS</a> membership
                             signups
                             between February 20, 2019 and March 9, 2019.
                         </p>
