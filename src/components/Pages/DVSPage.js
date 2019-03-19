@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+import ReactGA from 'react-ga';
 import DvsIcon from 'components/_ui/DvsIcon/DvsIcon';
 import MapContainer from "components/Map/MapContainer";
 import Spinner from "components/_ui/Spinner/Spinner";
@@ -38,22 +39,27 @@ class DVSPage extends Component {
 
     toggleData = (name) => {
         if (name === "data") {
+            this.trackEvent('DVS | toggled Data');
             this.setState(prevState => ({
                 showData: !prevState.showData
             }));
         } else if (name === "visualization") {
+            this.trackEvent('DVS | toggled Viz');
             this.setState(prevState => ({
                 showViz: !prevState.showViz
             }));
         } else if (name === "society"){
+            this.trackEvent('DVS | toggled Society');
             this.setState(prevState => ({
                 showSociety: !prevState.showSociety
             }));
         } else if (name === "map") {
+            this.trackEvent('DVS | toggled Map');
             this.setState(prevState => ({
                 showMap: !prevState.showMap
             }));
         } else {
+            this.trackEvent('DVS | toggled Spooch');
             this.setState(prevState => ({
                 showMe: !prevState.showMe
             }));
@@ -64,8 +70,21 @@ class DVSPage extends Component {
         this.setState({ userTopOffset: top, userLeftOffset: left});
     }
 
+    initializeReactGA() {
+        ReactGA.initialize('UA-130275221-1');
+        ReactGA.pageview('/dvs/');
+    }
+
+    trackEvent = (action) => {
+        ReactGA.event({
+            category: 'User',
+            action: action,
+        });
+    }
+
     componentDidMount() {
         this.props.hideNavs();
+        this.initializeReactGA();
     }
 
     render() {
@@ -89,8 +108,12 @@ class DVSPage extends Component {
                             Data Visualization Society
                         </h1>
                         <p>
-                            This map shows the locations of <a rel="noopener noreferrer" target="_blank" href="https://www.datavisualizationsociety.com/" >DVS</a> membership
-                            signups
+                            This map shows the locations
+                            of <a rel="noopener noreferrer"
+                               target="_blank"
+                               href="https://www.datavisualizationsociety.com/">
+                               DVS
+                            </a> membership signups
                             between February 20, 2019 and March 9, 2019.
                         </p>
                         <div className="DVS__InfoKey">
