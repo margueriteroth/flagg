@@ -35,6 +35,97 @@ const books = [
     //     </div>
     // },
     {
+        title: "The Man from the Train: The Solving of a Century-Old Serial Killer Mystery",
+        author: "Bill James,  Rachel McCarthy James",
+        finished: "",
+        inProgress: true,
+        "tags": [
+            "non-fiction",
+            "true crime",
+        ],
+        isFiction: false,
+        genre: "true crime",
+        goodreadsUrl: "https://www.goodreads.com/en/book/show/32919543-the-man-from-the-train",
+        coverImg: "https://images.gr-assets.com/books/1505658828l/32919543.jpg",
+        summary: <div>
+            <p>
+                Using unprecedented, dramatically compelling sleuthing techniques,
+                legendary statistician and baseball writer Bill James applies his
+                analytical acumen to crack an unsolved century-old mystery surrounding
+                one of the deadliest serial killers in American history.
+            </p>
+            <p>
+                Between 1898 and 1912, families across the country were bludgeoned
+                in their sleep with the blunt side of an axe. Jewelry and valuables
+                were left in plain sight, bodies were piled together, faces covered
+                with cloth. Some of these cases, like the infamous Villasca, Iowa,
+                murders, received national attention. But few people believed the
+                crimes were related. And fewer still would realize that all of
+                these families lived within walking distance to a train station.
+
+            </p>
+            <p>
+                When celebrated baseball statistician and true crime expert Bill
+                James first learned about these horrors, he began to investigate
+                others that might fit the same pattern. Applying the same know-how
+                he brings to his legendary baseball analysis, he empirically
+                determined which crimes were committed by the same person. Then
+                after sifting through thousands of local newspapers, court
+                transcripts, and public records, he and his daughter Rachel
+                made an astonishing discovery: they learned the true identity
+                of this monstrous criminal. In turn, they uncovered one of
+                the deadliest serial killers in America.
+            </p>
+            <p>
+                Riveting and immersive, with writing as sharp as the cold side
+                of an axe, <i>The Man from the Train</i> paints a vivid, psychologically
+                perceptive portrait of America at the dawn of the twentieth
+                century, when crime was regarded as a local problem, and
+                opportunistic private detectives exploited a dysfunctional
+                judicial system. James shows how these cultural factors enabled
+                such an unspeakable series of crimes to occur, and his
+                groundbreaking approach to true crime will convince skeptics,
+                amaze aficionados, and change the way we view criminal history.
+            </p>
+        </div>
+    },
+    {
+        title: "Death of Nine: The Dyatlov Pass Mystery",
+        author: "Launton Anderson",
+        finished: "",
+        "tags": [
+            "non-fiction",
+            "true crime",
+        ],
+        isFiction: false,
+        genre: "true crime",
+        goodreadsUrl: "https://www.goodreads.com/book/show/43557667-death-of-nine",
+        coverImg: "https://images.gr-assets.com/books/1547421413l/43557667.jpg",
+        summary: <div>
+            <p>
+                Nine experienced winter hikers found dead. Crushed ribs and missing eyes are
+                just a few of their horrific injuries. Their tent is found a mile away
+                slashed and destroyed. What happened?
+            </p>
+            <p>
+                <i>Death of Nine</i> guides you through that fateful night to unravel the
+                clues and reveal the answer.
+            </p>
+            <p>
+                From the radiation report to the autopsy profiles, <i>Death of Nine</i> explores
+                all the clues, some old and some that have never been published before now.
+            </p>
+            <p>
+                The Dyatlov Pass mystery is one of the most intriguing and perplexing
+                mysteries in the world. These nine hikers died sixty years ago. Here,
+                their true story is told. Their story, and the clues left behind, lead
+                to one conclusion. <i>Death of Nine</i> explains that conclusion and is the
+                key to solving the mystery of what really happened so long ago on that
+                dark, cold winter night.
+            </p>
+        </div>
+    },
+    {
         title: "Org Design for Design Orgs",
         author: "Peter Merholz,  Kristin Skinner",
         finished: "",
@@ -182,7 +273,7 @@ const books = [
         title: "The Outsider",
         author: "Stephen King",
         finished: "",
-        inProgress: true,
+        inProgress: false,
         "tags": [
             "fiction",
             "horror",
