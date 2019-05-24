@@ -135,6 +135,7 @@
         box-shadow: $box-shadow__image--grey;
         transition: all 100ms ease-out;
         border-radius: $border-radius--700;
+        display: block;
 
         &__container {
             position: relative;

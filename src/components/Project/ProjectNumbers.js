@@ -45,6 +45,9 @@ class ProjectNumbers extends Component {
                             to check numbers I am converting.
                         </p>
                         <p>
+                            This is a work in progress. 😊
+                        </p>
+                        <p>
                             <i className="Project__link__icon fab fa-github"></i>
                             <a className="Project__inspiration__link"
                                 onClick={() => this.trackEvent('Project | clicked Github: Number Translator')}
