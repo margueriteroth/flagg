@@ -64,6 +64,16 @@ class HomePage extends Component {
                         />
                     )}
                     <BookshelfContainer />
+                    <div className="CTA__container">
+                        <h1 className="CTA">
+                            If you have an idea for a project, have any questions about my
+                            work, or just want to say hi, <a href="mailto:hello@marguerite.io"
+                                onClick={() => this.trackEvent('HomePage | clicked CTA')}
+                                rel="noopener noreferrer" target="_blank">
+                                I would love to chat</a>.
+                                <span role="img" aria-label="emoji" className="CTA__emoji emoji">😊</span>
+                        </h1>
+                    </div>
                     <ProjectNumbers />
                 </div>
             </div>
