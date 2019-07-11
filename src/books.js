@@ -35,6 +35,94 @@ const books = [
     //     </div>
     // },
     {
+        title: "Under the Dome",
+        author: "Stephen King",
+        finished: false,
+        inProgress: true,
+        "tags": [
+            "non-fiction",
+            "horror",
+        ],
+        isFiction: true,
+        genre: "horror",
+        goodreadsUrl: "https://www.goodreads.com/book/show/6320534-under-the-dome",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511289992l/6320534._SY475_.jpg",
+        summary: <div>
+            <p>
+                On an entirely normal, beautiful fall day in Chester’s Mill, Maine, the
+                town is inexplicably and suddenly sealed off from the rest of the world
+                by an invisible force field. Planes crash into it and fall from the sky
+                in flaming wreckage, a gardener’s hand is severed as “the dome” comes
+                down on it, people running errands in the neighboring town are divided
+                from their families, and cars explode on impact. No one can fathom what
+                this barrier is, where it came from, and when—or if—it will go away.
+            </p>
+            <p>
+                Dale Barbara, Iraq vet and now a short-order cook, finds himself teamed
+                with a few intrepid citizens—town newspaper owner Julia Shumway, a
+                physician’s assistant at the hospital, a selectwoman, and three brave
+                kids. Against them stands Big Jim Rennie, a politician who will stop
+                at nothing—even murder—to hold the reins of power, and his son, who
+                is keeping a horrible secret in a dark pantry. But their main adversary
+                is the Dome itself. Because time isn’t just short. It’s running out. Source: stephenking.com
+            </p>
+        </div>
+    },
+    {
+        title: "The Apology",
+        author: "Eve Ensler",
+        finished: true,
+        "tags": [
+            "non-fiction",
+            "Memoir",
+        ],
+        isFiction: false,
+        genre: "memoir",
+        goodreadsUrl: "https://www.goodreads.com/en/book/show/43198851-the-apology",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1547758022l/43198851.jpg",
+        summary: <div>
+            <p>
+                <b>
+                    From Eve Ensler, author of one of the most influential works of the twentieth
+                    century--The Vagina Monologues--and one of Newsweek's "150 Women Who Changed the World,"
+                    comes a powerful, life-changing examination of abuse and atonement.
+                </b>
+            </p>
+            <p>
+                Like millions of women, Eve Ensler has been waiting much of her lifetime for an apology.
+                Sexually and physically abused from the age of 5 by her father, Eve has struggled and
+                suffered her whole life from this betrayal, longing for an honest reckoning from a man
+                who is long dead. After years of work as an artist and anti-violence activist, she
+                decided she was no longer waiting; an apology could be imagined, by her, for her,
+                to her. This book, <i>The Apology</i>, written by Eve from her father's point of
+                view in the words she longed to hear attempts to transform the abuse she suffered,
+                with unflinching truthfulness, compassion, and an expansive vision for the future.
+            </p>
+            <p>
+                Through <i>The Apology</i> Eve has set out to provide a new way for herself and a
+                possible road for others, so that survivors of abuse may finally imagine how to be
+                free. In it, she grapples with questions she has sought answers to since she began
+                to understand the impact of her father's abuse on her life: <i>How do we offer a
+                    doorway rather than only a locked cell? How do move from humiliation to
+                    revelation, from curtailing behavior to changing it, from condemning
+                    perpetrators to calling them to reckoning?</i>
+            </p>
+            <p>
+                <i>The Apology</i> is a remarkably original book that explores the deepest and
+                most intimate questions that can be asked at this moment: Why do men carry out
+                abuse, often against the people they know and love the most? How can we--together--stop
+                it? What does it mean to apologize for these acts? What will it take for the men who
+                have committed abuse to make a deep reckoning and actually apologize? As Tony Porter
+                from A Call to Men says, “We've called men out, now how do we call them in?”
+            </p>
+            <p>
+                <i>The Apology</i> is an acutely transformational book--about how, from the wounds
+                of sexual abuse, we can begin to re-emerge and heal. It is a revolutionary book
+                asking everything of each of us: courage, truthfulness, and forgiveness.
+            </p>
+        </div>
+    },
+    {
         title: "The Man from the Train: The Solving of a Century-Old Serial Killer Mystery",
         author: "Bill James,  Rachel McCarthy James",
         finished: "",
