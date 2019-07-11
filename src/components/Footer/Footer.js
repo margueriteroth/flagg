@@ -22,14 +22,6 @@ class Footer extends Component {
                     <div className="Footer__section Footer__section__links">
                         <Label className="Footer__label">
                             <a className="Footer__link"
-                                onClick={() => this.trackEvent('Footer | clicked Codepen')}
-                                href="http://codepen.io/marguerite"
-                                rel="noopener noreferrer" target="_blank">
-                                Codepen
-                            </a>
-                        </Label>
-                        <Label className="Footer__label">
-                            <a className="Footer__link"
                                 onClick={() => this.trackEvent('Footer | clicked Github')}
                                 href="http://www.github.com/margueriteroth"
                                 rel="noopener noreferrer" target="_blank">
@@ -50,6 +42,14 @@ class Footer extends Component {
                                 href="https://giphy.com/channel/marrrguerite"
                                 rel="noopener noreferrer" target="_blank">
                                 Giphy
+                            </a>
+                        </Label>
+                        <Label className="Footer__label">
+                            <a className="Footer__link"
+                                onClick={() => this.trackEvent('Footer | clicked Codepen')}
+                                href="http://codepen.io/marguerite"
+                                rel="noopener noreferrer" target="_blank">
+                                Codepen
                             </a>
                         </Label>
                         <Label className="Footer__label">
