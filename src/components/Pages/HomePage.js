@@ -74,7 +74,7 @@ class HomePage extends Component {
                                 <span role="img" aria-label="emoji" className="CTA__emoji emoji">😊</span>
                         </h1>
                     </div>
-                    <ProjectNumbers />
+                    {/* <ProjectNumbers /> */}
                 </div>
             </div>
         );
