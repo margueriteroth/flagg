@@ -5,11 +5,11 @@
     height: 100%;
 
     &__container {
-        height: 46px;
-        width: 46px;
+        height: 56px;
+        width: 56px;
         border-radius: 100px;
         overflow: hidden;
-        border: 3px solid white;
+        border: 4px solid white;
         box-shadow: 0 6px 8px rgba(102, 119, 136, 0.12), 0 1px 2px rgba(102, 119, 136, 0.53);
     }
 }

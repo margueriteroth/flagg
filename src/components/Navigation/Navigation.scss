@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: $max-width__navigation;
+    max-width: 100%;
     margin: 0 auto;
     padding-left: $padding-horizontal;
     padding-right: $padding-horizontal;
@@ -36,17 +36,13 @@
         background: $white;
         transition: all 150ms linear;
         color: $black;
-        box-shadow: $box-shadow--nav;
         height: $navigation-height;
-        opacity: 0;
-        transform: translateY(-10px);
         z-index: 500;
-        pointer-events: none;
+        border-bottom: 1px solid transparent;
 
         &--is-visible {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: all;
+            border-color: #eeeeee;
+            box-shadow: 0 3px 10px 0 rgba(black, 0.025);
         }
 
         // @media(max-width: $media-mobile) {
@@ -89,9 +85,9 @@
 
     &__item {
         font-weight: 600;
-        margin-right: 3em;
+        margin-right: 4em;
         text-decoration: none;
-        color: $text-light;
+        color: $text-dark;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -100,7 +96,7 @@
         border-bottom: 4px solid transparent;
 
         &:visited {
-            color: $text-light;
+            color: $text-dark;
         }
 
         &:last-of-type {
@@ -108,7 +104,7 @@
         }
 
         @media(max-width: $media-mobile) {
-            margin-right: 1.3em;
+            margin-right: 3.25em;
         }
 
         &--avatar {
@@ -117,12 +113,6 @@
             @media(max-width: $media-mobile) {
                 order: -1;
                 margin-right: $padding-horizontal--mobile;
-                display: none;
-
-                .Avatar__container {
-                    height: 40px;
-                    width: 40px;
-                }
             }
         }
 
@@ -138,6 +128,7 @@
         &--current {
             color: $text-dark;
             border-bottom-color: $blue-500;
+            background: red;
 
             &:visited {
                 color: $text-dark;

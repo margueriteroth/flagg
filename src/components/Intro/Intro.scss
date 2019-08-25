@@ -1,31 +1,15 @@
 @import "../../styles/lib.scss";
 
 .Intro {
-    //text-align: center;
-    //max-width: 700px;
-    //margin: 0 auto;
-    margin-bottom: 13em;
-    margin-top: 30px;
+    padding-bottom: 8em;
+    padding-bottom: 12vh;
+    min-height: calc(#{100vh} - 160px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     @media(max-width: 768px) {
-        text-align: center;
-    }
-
-    @media(max-width: 500px) {
-
-
-    }
-
-    &__avatar {
-        //margin: 0 auto;
-        width: 100px;
-        height: 100px;
-        margin-bottom: 1em;
-
-        @media(max-width: 768px) {
-            margin: 0 auto;
-            margin-bottom: 1em;
-        }
+        //text-align: center;
     }
 
     &__contact {
@@ -43,8 +27,8 @@
     }
 
     &__header {
-        font-size: 4.25em;
-        font-weight: 900;
+        font-size: 4.75em;
+        font-weight: 800;
         line-height: 1.2;
         max-width: 100%;
         transition: font-size 100ms ease-out;
@@ -60,13 +44,14 @@
         }
 
         @media(max-width: 500px) {
-            font-size: 2.3em;
+            font-size: 2.7em;
             transition: font-size 100ms ease-out;
         }
     }
 
     &__subheader {
-        font-weight: 600;
+        font-weight: 700;
+        color: $grey-light;
         margin-top: 1.7em;
         margin-bottom: 1em;
         animation: fade--up 1s ease-out;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import { Link } from 'react-router-dom';
 import Avatar from "components/_ui/Avatar/Avatar";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import classNames from 'classnames';
 import Button from "components/_ui/Button/Button";
 import Label from "components/_ui/Label/Label";
@@ -79,33 +80,20 @@ class Navigation extends Component {
         const { navIsVisible } = this.state;
         const { currentPage } = this.props;
         return (
-            <div className={classNames("Navigation__container",
+            <div id="top" className={classNames("Navigation__container",
                            {"Navigation__container--is-visible" : navIsVisible})}>
                 <div className="Navigation">
                     <div className="Navigation__links">
-                        <Link
-                            onClick={() => this.onClick('Home (avatar)')}
-                            className="Navigation__item Navigation__item--avatar"
-                            to="/">
+                        <AnchorLink
+                            href='#top' offset="156" className="Navigation__item Navigation__item--avatar">
                             <Avatar className="Navigation__avatar" />
-                        </Link>
-                        <Link
-                            onClick={() => this.onClick('Home (name)')}
-                            className="Navigation__item Navigation__item--title"
-                            to="/">
-                            Marguerite Roth
-                        </Link>
+                        </AnchorLink>
                     </div>
                     <div className="Navigation__links">
-                        <Link
-                            onClick={this.props.handleScrollToElement}
-                            className={classNames("Navigation__item",
-                                { "Navigation__item--current": currentPage ==="/"})}
-                            to="/">
-                            <Label category="primary">
-                                Projects
-                            </Label>
-                        </Link>
+                        <AnchorLink
+                            href='#projects' offset="156" className="Navigation__item">
+                            Projects
+                        </AnchorLink>
                         {/* <Link
                             onClick={() => this.onClick('About')}
                             className={classNames("Navigation__item Navigation__item--about",
@@ -116,16 +104,12 @@ class Navigation extends Component {
                             </Label>
                         </Link> */}
                         <a href="mailto:hello@marguerite.io"
+                            className="Navigation__item"
                             onClick={() => this.trackEvent('Navigation | clicked Contact')}
                             rel="noopener noreferrer" target="_blank">
-                            <Button>
-                                Contact
-                            </Button>
+                            Contact
                         </a>
                     </div>
-
-
-
                 </div>
             </div>
         );

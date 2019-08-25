@@ -38,7 +38,6 @@ class HomePage extends Component {
         const offset = this.projectSectionRef.current.offsetTop;
         this.props.setProjectSectionOffset(offset);
         this.initializeReactGA();
-        console.log('initialize hom');
     }
 
     render() {
@@ -74,7 +73,7 @@ class HomePage extends Component {
                                 <span role="img" aria-label="emoji" className="CTA__emoji emoji">😊</span>
                         </h1>
                     </div>
-                    {/* <ProjectNumbers /> */}
+            {/* <ProjectNumbers /> */}
                 </div>
             </div>
         );
