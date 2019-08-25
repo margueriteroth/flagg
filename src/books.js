@@ -35,6 +35,67 @@ const books = [
     //     </div>
     // },
     {
+        title: "1984",
+        author: "George Orwell",
+        finished: false,
+        inProgress: true,
+        "tags": [
+            "non-fiction",
+            "sci-fi",
+        ],
+        isFiction: false,
+        genre: "sci-fi",
+        goodreadsUrl: "https://www.goodreads.com/book/show/40961427-1984",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1532714506l/40961427._SX318_.jpg",
+        summary: <div>
+            <p>
+                Among the seminal texts of the 20th century, <i>Nineteen Eighty-Four</i> is a
+                rare work that grows more haunting as its futuristic purgatory becomes more
+                real. Published in 1949, the book offers political satirist George Orwell's
+                nightmarish vision of a totalitarian, bureaucratic world and one poor stiff's
+                attempt to find individuality. The brilliance of the novel is Orwell's
+                prescience of modern life—the ubiquity of television, the distortion of
+                the language—and his ability to construct such a thorough version of hell.
+                Required reading for students since it was published, it ranks among the most
+                terrifying novels ever written.
+            </p>
+        </div>
+    },
+    {
+        title: "I Know Why the Caged Bird Sings",
+        author: "Maya Angelou",
+        finished: false,
+        audiobook: true,
+        inProgress: true,
+        "tags": [
+            "non-fiction",
+            "memoir",
+        ],
+        isFiction: false,
+        genre: "memoir",
+        goodreadsUrl: "https://www.goodreads.com/book/show/13214.I_Know_Why_the_Caged_Bird_Sings",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327957927l/13214.jpg",
+        summary: <div>
+            <p>
+                Sent by their mother to live with their devout, self-sufficient
+                grandmother in a small Southern town, Maya and her brother,
+                Bailey, endure the ache of abandonment and the prejudice of
+                the local "powhitetrash." At eight years old and back at her
+                mother’s side in St. Louis, Maya is attacked by a man many
+                times her age—and has to live with the consequences for a
+                lifetime. Years later, in San Francisco, Maya learns that
+                love for herself, the kindness of others, her own strong
+                spirit, and the ideas of great authors ("I met and fell in
+                love with William Shakespeare") will allow her to be free
+                instead of imprisoned.
+            </p>
+            <p>
+                Poetic and powerful, <i>I Know Why the Caged Bird Sings</i> will touch
+                hearts and change minds for as long as people read.
+            </p>
+        </div>
+    },
+    {
         title: "Under the Dome",
         author: "Stephen King",
         finished: false,
@@ -126,7 +187,7 @@ const books = [
         title: "The Man from the Train: The Solving of a Century-Old Serial Killer Mystery",
         author: "Bill James,  Rachel McCarthy James",
         finished: "",
-        inProgress: true,
+        inProgress: false,
         "tags": [
             "non-fiction",
             "true crime",
