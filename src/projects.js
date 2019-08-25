@@ -24,6 +24,30 @@ const projects = {
             "project-dvs-01"
         ],
     },
+    prist: {
+        title: "Prist | A Gatsby & Prismic Starter",
+        projectType: "web",
+        description: <div>
+            A light-themed starter powered
+            by <a href="https://www.gatsbyjs.org/" rel="noopener noreferrer" target="_blank">Gatsby v2</a> and <a href="https://www.gatsbyjs.org/" rel="noopener noreferrer" target="_blank">Prismic</a> to showcase portfolios and blogs.
+            <br />
+            <br />
+            <a href="https://www.gatsbyjs.org/starters/margueriteroth/gatsby-prismic-starter-prist/" rel="noopener noreferrer" target="_blank">Gatsby starter doc</a>
+        </div>,
+        demo: "https://prist.marguerite.io/",
+        github: "https://github.com/margueriteroth/gatsby-prismic-starter-prist",
+        "tech": [
+            "gatsby",
+            "graphql",
+            "cms",
+            "react",
+            "figma"
+        ],
+        hasImageBorder: true,
+        "img_src": [
+            "project-prist-01"
+        ],
+    },
     albondiga: {
         title: "Albondiga | App for requesting some dinner 🍝",
         projectType: "web",

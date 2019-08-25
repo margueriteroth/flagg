@@ -54,6 +54,7 @@ class HomePage extends Component {
                             demo={projects[key].demo}
                             description={projects[key].description}
                             github={projects[key].github}
+                            hasImageBorder={projects[key].hasImageBorder}
                             images={projects[key].img_src}
                             inspiration={projects[key].inspiration}
                             projectType={projects[key].projectType}

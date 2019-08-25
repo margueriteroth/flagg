@@ -12,6 +12,7 @@ class Project extends Component {
         demo: PropTypes.string,
         description: PropTypes.string,
         github: PropTypes.string,
+        hasImageBorder: PropTypes.boolean,
         images: PropTypes.array,
         inspiration: PropTypes.string,
         tech: PropTypes.array,
@@ -26,7 +27,8 @@ class Project extends Component {
     }
 
     render() {
-        const { demo, description, github, images, inspiration, tech, title } = this.props;
+        const { demo, description, github, hasImageBorder, images, inspiration, tech, title } = this.props;
+        const bees = this.props.key;
         return (
             <div className="Project__container">
                 <div className="Project__info__container">
@@ -92,11 +94,13 @@ class Project extends Component {
                 <div className={classNames("Project__image__container", {
                     'Project__image__container--has-link': demo
                 })}>
-                    {Object.keys(images).map((key) =>
+                    {Object.keys(images).map((key, bees) =>
                         <a className="Project__image__link"
                             onClick={() => this.trackEvent(`Project | clicked demo Image: ${title}`)}
                             href={demo} rel="noopener noreferrer" target="_blank" key={key}>
-                            <img className="Project__image"
+                            <img className={classNames("Project__image", {
+                                "Project__image--hasBorder" : hasImageBorder
+                            })}
                                 src={require(`./images/${images[key]}.png`)}
                                 alt="Project"
                             />
