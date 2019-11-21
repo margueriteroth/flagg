@@ -30,7 +30,7 @@ class HomePage extends Component {
     }
 
     initializeReactGA() {
-        ReactGA.initialize('UA-130275221-1');
+        ReactGA.initialize('GA_ID');
         ReactGA.pageview('/homepage');
     }
 
